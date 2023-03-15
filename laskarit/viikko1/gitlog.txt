@@ -1,0 +1,115 @@
+commit eb3d7d5fe516fe7926eaff5d96df947248164b3f
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:41:30 2023 +0200
+
+    Tehtiin paljon muutoksia file-tiedostoihin.
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit b6e840c3681f3f7c91146f59a99254a0493b2b2a
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:37:31 2023 +0200
+
+    Lisättiin kansio "tiedostoja" ja sinne kolme tyhjää tiedostoa "file1", "file2", "file3"
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ed7c0014c6ee70763f9cd00ff0d039733b898d2b
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:32:50 2023 +0200
+
+    Koskahan muistan sen -m. Harjoittelin git add -p käyttöä, lisäsin ja poistin tekstiä.
+
+ eka.txt    | 3 ++-
+ kolmas.txt | 2 +-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+commit 83f0fa61e7b2485218d31025b72f514d509c73a1
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:30:56 2023 +0200
+
+    huoh täällä nanossa taas. vaihdettiin tiedosto.txt > eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 5166c92dfb7ff0af35f7c72012e03a83bb061cc4
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:30:08 2023 +0200
+
+    vittu taas -m
+
+ tiedosto | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 520d7c148043cb47d6870b787d361c2e67bb980c
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:29:38 2023 +0200
+
+    Unohdin taas sen -m... Poistettiin tiedosto toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit d2049e4a0f0b617fc697746548a7484fdfaf905f
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:26:57 2023 +0200
+
+    Unohdin lisätä perään -m ja nyt olen editorissa...
+
+ tiedosto.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 50a812bc794648ef06bf0a47abd50d7504075b1d
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:25:41 2023 +0200
+
+    Lisättiin tekstiä tiedosto.txt
+
+ tiedosto.txt | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+commit 30784945459f4bbd5f7468c200403536a52b4c7c
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:05:19 2023 +0200
+
+    Lisättiin tekstiä toiseen ja kolmanteen, luotiin kansio ja lisättiin sinne tiedosto-niminen tieosto
+
+ kolmas.txt     | 1 +
+ stuff/tiedosto | 0
+ tiedosto       | 0
+ toinen.txt     | 1 +
+ 4 files changed, 2 insertions(+)
+
+commit b68bc9a7c3f300384b40166bbd8c8a1e36f7eaae
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:02:57 2023 +0200
+
+    Kolmannen tiedoston lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit fe7b745ef7d8b9b2068c3100cb52075db1b7b92f
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:01:37 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 2bfe996026d2b38dee23f1b00b6e9a5e9820a08f
+Author: Ville-Juhani Nivasalo <ville-juhani.nivasalo@helsinki.fi>
+Date:   Wed Mar 15 19:00:14 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
