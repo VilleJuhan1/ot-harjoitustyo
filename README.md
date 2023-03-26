@@ -5,7 +5,7 @@
 Tämä projekti on Helsingin yliopiston kevään 2023 Ohjelmistotekniikka-kurssiin liittyvä harjoitustyö. Repositoriossa on sekä kurssiin liittyviä
 harjoitustehtäviä että oma ohjelmointiprojekti.
 
-Lisätietoa ohjelmointiprojektista ja sen etenemisestä löytyy [Dokumentaatio-kansiosta](https://github.com/VilleJuhan1/ot-harjoitustyo/tree/master/dokumentaatio)
+Lisätietoa ohjelmointiprojektista ja sen etenemisestä löytyy [Dokumentaatio-kansiosta](https://github.com/VilleJuhan1/ot-harjoitustyo/tree/master/dokumentaatio).
 
 > The road to success is always under construction. -Lily Tomlin
 

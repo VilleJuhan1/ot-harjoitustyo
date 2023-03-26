@@ -15,21 +15,19 @@ Pelissä ei ole erillisiä käyttäjärooleja.
 
 Peli avautuu aloitusvalikkoon, josta löytyvät ainakin seuraavat toiminnallisuudet:
 
--Aloita uusi peli
--Vaihda vaikeusastetta (1-9)
--Katso ennätystulokset
--Lopeta peli
+- Aloita uusi peli
+- Vaihda vaikeusastetta (1-9)
+- Katso ennätystulokset
+- Lopeta peli
 
 Pelikenttä koodataan graafisena käyttäen Pygamea. Taustalla koodissa kaksiulotteinen taulukko. Mahdollisuus rakentaa näin myös uusia
-kenttiä.
-
-Matoa ohjataan nuolinäppäimillä.
+kenttiä. Matoa ohjataan nuolinäppäimillä.
 
 ### Perusversion toiminnallisuudet
 
 - [ ] Tekstipohjainen käyttöliittymä
 - [ ] Paikalliseen tiedostoon tallentuvat ennätystulokset
-- [ ] Yksi pelattava kenttä, joka toimii yhdellä vaikeusasteella, kuten olettaa voi
+- [ ] Yksi pelattava kenttä, joka toimii yhdellä vaikeusasteella, kuten olettaa voi (liikkuminen, törmääminen, kasvaminen, hedelmien ilmestyminen ja pistelasku
 - [ ] Perustoiminnallisuuksia testaavat automaattitestit
 
 ### Jatkokehittelyjä mahdollisuuksien mukaan
