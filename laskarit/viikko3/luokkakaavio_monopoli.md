@@ -24,4 +24,14 @@ classDiagram
         pelinappula
         kortit
     }
+    class `Asemat ja laitokset`{
+        hinta
+        maksut
+    }
+    class `Kadut`{
+        int hinta
+        int talo_hinta
+        int hotelli_hinta
+        list maksut
+    }
 ```    
