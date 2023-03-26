@@ -12,6 +12,8 @@ classDiagram
     Ruutu <|-- `Asemat ja laitokset`
     Ruutu <|-- Kadut
     Toimintakortti "*" --> "*" `Sattuma ja yhteismaa`
+    Pelaaja .. Kadut
+    Pelaaja .. `Asemat ja laitokset`
 
 %% Määritetään yläluokkien ominaisuudet
     class Pelilauta{
@@ -22,8 +24,10 @@ classDiagram
     }
     class Pelaaja{
         pelinappula
-        kortit
+        omistukset
     }
+
+%% Määritetään perittyjen luokkien ominaisuudet
     class `Asemat ja laitokset`{
         hinta
         maksut
