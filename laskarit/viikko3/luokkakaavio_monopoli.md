@@ -26,13 +26,17 @@ classDiagram
         pelinappula
         omistukset
     }
+    class Noppa{
+    }
 
 %% Määritetään perittyjen luokkien ominaisuudet
     class `Asemat ja laitokset`{
-        hinta
-        maksut
+        bool vapaa
+        int hinta
+        list maksut
     }
     class `Kadut`{
+        bool vapaa
         int hinta
         int talo_hinta
         int hotelli_hinta
