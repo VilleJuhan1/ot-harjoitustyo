@@ -2,10 +2,9 @@
 
 ```mermaid
 classDiagram
-    Pelilauta "1" --> "*" Ruutu
+    Ruutu "*" --> "1" Pelilauta
     Pelaaja "*" --> "1" Ruutu
     class Pelilauta{
-        ruudut
     }
     class Ruutu{
         jarjestysnumero
