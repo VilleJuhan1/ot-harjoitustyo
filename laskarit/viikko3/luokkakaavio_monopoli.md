@@ -2,12 +2,13 @@
 
 ```mermaid
 classDiagram
-    Ruutu <|-- Vankila
-    Ruutu <|-- Aloitus
-    Ruutu <|-- Sattuma
-    Ruutu <|-- Yhteismaa
+
+%% Alustetaan luokat ja niiden suhteet
     Ruutu "*" --> "1" Pelilauta
     Pelaaja "*" --> "1" Ruutu
+    Vankila <|-- Ruutu
+
+%% Määritetään luokkien ominaisuudet
     class Pelilauta{
     }
     class Ruutu{
@@ -15,13 +16,5 @@ classDiagram
     }
     class Pelaaja{
         pelinappula
-    }
-    class Vankila{
-    }
-    class Aloitus{
-    }
-    class Sattuma{
-    }
-    class Yhteismaa{
     }
 ```    
