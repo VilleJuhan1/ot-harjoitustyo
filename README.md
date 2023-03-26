@@ -2,7 +2,10 @@
 
 **Ville-Juhani Nivasalo**
 
-Tämä ohjelma on vasta alkuvaiheessa, kuten myös tämä README-tiedosto.
+Tämä projekti on Helsingin yliopiston kevään 2023 Ohjelmistotekniikka-kurssiin liittyvä harjoitustyö. Repositoriossa on sekä kurssiin liittyviä
+harjoitustehtäviä että oma ohjelmointiprojekti.
+
+Lisätietoa ohjelmointiprojektista ja sen etenemisestä löytyy [Dokumentaatio-kansiosta](https://github.com/VilleJuhan1/ot-harjoitustyo/tree/master/dokumentaatio)
 
 > The road to success is always under construction. -Lily Tomlin
 
@@ -15,3 +18,10 @@ Tämä ohjelma on vasta alkuvaiheessa, kuten myös tämä README-tiedosto.
 [komentorivi.txt](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 ***Tämä teksti on sitä varten, että pystytään testaamaan paikallisen ja etärepositorion epäsynkroonia ***
+
+*Viikko 2*
+
+[laskarit](https://github.com/VilleJuhan1/ot-harjoitustyo/tree/master/laskarit/viikko2)
+
+[oman sovelluksen alustava määrittelydokumentti](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
