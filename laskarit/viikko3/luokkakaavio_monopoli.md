@@ -24,6 +24,7 @@ classDiagram
     }
     class Pelaaja{
         pelinappula
+        rahat
         omistukset
     }
     class Noppa{
@@ -42,6 +43,7 @@ classDiagram
         int hinta
         int talo_hinta
         int hotelli_hinta
+        int kiinteistojen_lkm
         list maksut
     }
 ```    
