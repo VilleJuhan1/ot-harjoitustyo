@@ -27,6 +27,8 @@ classDiagram
         omistukset
     }
     class Noppa{
+        int eka_heitto
+        int toka_heitto
     }
 
 %% Määritetään perittyjen luokkien ominaisuudet
