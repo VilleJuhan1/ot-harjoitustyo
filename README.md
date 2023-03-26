@@ -25,3 +25,4 @@ Lisätietoa ohjelmointiprojektista ja sen etenemisestä löytyy [Dokumentaatio-k
 
 [oman sovelluksen alustava määrittelydokumentti](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
+[oman sovelluksen kehittämiseen liittyvä työaikakirjanpito](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
