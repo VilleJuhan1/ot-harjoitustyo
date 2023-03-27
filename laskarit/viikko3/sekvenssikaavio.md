@@ -3,9 +3,11 @@
 ```mermaid
 sequenceDiagram
 
-    participant Main
+    participant main
     participant Machine
     participant FuelTank
     participant Engine
+
+    main->>auto: Machine()
 
 ```
