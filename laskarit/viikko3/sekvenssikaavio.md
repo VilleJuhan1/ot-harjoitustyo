@@ -5,9 +5,9 @@ sequenceDiagram
 
     participant main
     main->>Machine: auto = Machine()
-    Machine->> auto
+    Machine->>auto
     activate auto
-    auto->>FuelTank: self._tank =  FuelTank()
+    auto->>FuelTank: self._tank = FuelTank()
     FuelTank-->>auto: fuel_contents = 0
     auto->>FuelTank: self._tank.fill(40)
     Fueltank-->>auto: fuel_contents = 40
