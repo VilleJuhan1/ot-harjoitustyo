@@ -4,10 +4,8 @@
 sequenceDiagram
 
     participant main
-    participant Machine
-    participant FuelTank
-    participant Engine
-
     main->>auto: Machine()
+    auto->>FuelTank: FuelTank()
+    FuelTank->>auto: auto._tank.fuel_contents = 0
 
 ```
