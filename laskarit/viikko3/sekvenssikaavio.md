@@ -1,14 +1,11 @@
 ### Tehtävä 3: Sekvenssikaavio
 
 ```mermaid
-classDiagram
+sequenceDiagram
 
-    class main{
-    }
-    class Machine{
-    }
-    class FuelTank{
-    }
-    class Engine{
-    }
+    participant Main
+    participant Machine
+    participant FuelTank
+    participant Engine
+
 ```
