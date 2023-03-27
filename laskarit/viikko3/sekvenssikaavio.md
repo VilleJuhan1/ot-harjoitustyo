@@ -4,11 +4,13 @@
 sequenceDiagram
 
     participant main
-    main->>auto: Machine()
-    auto->>FuelTank: FuelTank()
-    FuelTank-->>auto._tank: fuel_contents = 0
-    auto->>Fueltank: self._tank.fill(40)
+    main->>Machine: auto = Machine()
+    Machine->> auto
+    activate auto
+    auto->>FuelTank: self._tank =  FuelTank()
+    FuelTank-->>auto: fuel_contents = 0
+    auto->>FuelTank: self._tank.fill(40)
     Fueltank-->>auto._tank: fuel_contents = 40
-    auto->>Engine: Engine()  
+    auto->>Engine: self._engine = Engine(self._tank)  
 
 ```
