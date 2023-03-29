@@ -5,7 +5,9 @@
 Tämä projekti on Helsingin yliopiston kevään 2023 Ohjelmistotekniikka-kurssiin liittyvä harjoitustyö. Repositoriossa on sekä kurssiin liittyviä
 harjoitustehtäviä että oma ohjelmointiprojekti.
 
-Lisätietoa ohjelmointiprojektista ja sen etenemisestä löytyy [Dokumentaatio-kansiosta](https://github.com/VilleJuhan1/ot-harjoitustyo/tree/master/dokumentaatio).
+Lisätietoa projektista ja sen etenemisestä löytyy [Dokumentaatio-kansiosta](https://github.com/VilleJuhan1/ot-harjoitustyo/tree/master/dokumentaatio).
+
+Ohjelmointiprojektin rakenteellisena runkona on käytetty kurssin [Sokoban-esimerkkiä](https://github.com/ohjelmistotekniikka-hy/pygame-sokoban)
 
 > The road to success is always under construction. -Lily Tomlin
 
@@ -26,3 +28,7 @@ Lisätietoa ohjelmointiprojektista ja sen etenemisestä löytyy [Dokumentaatio-k
 [oman sovelluksen alustava määrittelydokumentti](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [oman sovelluksen kehittämiseen liittyvä työaikakirjanpito](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+*Viikko 3*
+
+Viikon 3 päivitys README.md-tiedostoon tulee sen jälkeen kun viikon 2 tehtävät on arvioitu.
