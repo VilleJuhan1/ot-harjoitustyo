@@ -1,4 +1,4 @@
-### OT2023 harjoitustyö
+# OT2023 harjoitustyö
 
 **Ville-Juhani Nivasalo**
 
@@ -11,7 +11,7 @@ Ohjelmointiprojektin rakenteellisena runkona on käytetty kurssin [Sokoban-esime
 
 > The road to success is always under construction. -Lily Tomlin
 
-#### Tehtävät
+## Tehtävät
 
 *Viikko 1*
 
@@ -31,7 +31,9 @@ Ohjelmointiprojektin rakenteellisena runkona on käytetty kurssin [Sokoban-esime
 
 *Viikko 3*
 
-### Snek-matopeli
+Viikkotehtäviin liittyvät tekstit ja linkit poistetaan, kun viikon 2 tehtävät on tarkistettu.
+
+## Snek-matopeli
 
 ---
 
