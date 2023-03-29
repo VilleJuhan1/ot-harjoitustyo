@@ -9,3 +9,7 @@ class Worm(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
+        self.previous_move_time = 0
+
+    def should_move(current_time):
+        return current_time - self.previous_move_time >= 500

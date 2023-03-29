@@ -20,8 +20,17 @@ class GameLoop:
 
     def _handle_events(self):
         for event in self._event_queue.get():
-            if event.type == pygame.QUIT:
-                return False
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    self._level.worm_direction = "L"
+                if event.key == pygame.K_RIGHT:
+                    self._level.worm_direction = "R"
+                if event.key == pygame.K_UP:
+                    self._level.worm_direction = "U"
+                if event.key == pygame.K_DOWN:
+                    self._level.worm_direction = "D"
+            elif event.type == pygame.QUIT:
+                return False 
 
     def _render(self):
         self._renderer.render()

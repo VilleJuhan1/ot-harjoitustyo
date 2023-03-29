@@ -12,8 +12,8 @@ class Level:
         self.worm = pygame.sprite.Group()
         self.body = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
-
         self._initialize_sprites(level_map)
+        self.worm_direction = "L"
 
     def _initialize_sprites(self, level_map):
         height = len(level_map)
@@ -40,3 +40,11 @@ class Level:
             self.worm,
             self.body
         )
+
+    def update(self, current_time):
+        for worm in self.worm:
+            if worm.should_move(current_time):
+                self._move_worm(worm)
+
+    def _move_worm(self, worm):
+        pass
