@@ -33,7 +33,6 @@ Ohjelmointiprojektin rakenteellisena runkona on käytetty kurssin [Sokoban-esime
 
 Viikkotehtäviin liittyvät tekstit ja linkit poistetaan, kun viikon 2 tehtävät on tarkistettu.
 
-___
 ## Snek-matopeli
 
 Peli on tällä hetkellä kehitysvaiheessa.
