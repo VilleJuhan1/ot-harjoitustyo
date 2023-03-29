@@ -15,7 +15,10 @@ class GameLoop:
 
             current_time = self._clock.get_ticks()
 
-            self._level.update(current_time)
+            collision = self._level.update(current_time)
+            if collision:
+                break
+
             self._render()
             self._clock.tick(5)
 

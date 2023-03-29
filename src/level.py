@@ -46,7 +46,7 @@ class Level:
         if self.worm.should_move:
             self._move_worm()
         if pygame.sprite.spritecollide(self.worm, self.walls, False):
-            pass
+            return True
 
     def _move_worm(self):
         if self.worm_direction == "L":
