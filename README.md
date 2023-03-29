@@ -35,11 +35,10 @@ Viikkotehtäviin liittyvät tekstit ja linkit poistetaan, kun viikon 2 tehtävä
 
 ___
 ## Snek-matopeli
----
+
 Peli on tällä hetkellä kehitysvaiheessa.
----
+
 ### Dokumentaatio
----
 * [Alustava määrittelydokumentti](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [Työaikakirjanpito](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 * [Changelog](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
