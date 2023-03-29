@@ -31,4 +31,30 @@ Ohjelmointiprojektin rakenteellisena runkona on käytetty kurssin [Sokoban-esime
 
 *Viikko 3*
 
-Viikon 3 päivitys README.md-tiedostoon tulee sen jälkeen kun viikon 2 tehtävät on arvioitu.
+### Snek-matopeli
+
+---
+
+Peli on tällä hetkellä kehitysvaiheessa.
+
+---
+
+### Dokumentaatio
+
+---
+
+* [Alustava määrittelydokumentti](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+* [Työaikakirjanpito](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+* [Changelog](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+##### Asennus
+
+> poetry install
+
+##### Suorittaminen
+
+> poetry run invoke start
+
+##### Testaaminen
+
+> poetry run invoke coverage-report
