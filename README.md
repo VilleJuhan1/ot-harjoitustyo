@@ -33,30 +33,19 @@ Ohjelmointiprojektin rakenteellisena runkona on käytetty kurssin [Sokoban-esime
 
 Viikkotehtäviin liittyvät tekstit ja linkit poistetaan, kun viikon 2 tehtävät on tarkistettu.
 
+___
 ## Snek-matopeli
-
 ---
-
 Peli on tällä hetkellä kehitysvaiheessa.
-
 ---
-
 ### Dokumentaatio
-
 ---
-
 * [Alustava määrittelydokumentti](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [Työaikakirjanpito](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 * [Changelog](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
-
 ##### Asennus
-
 > poetry install
-
 ##### Suorittaminen
-
 > poetry run invoke start
-
 ##### Testaaminen
-
 > poetry run invoke coverage-report
