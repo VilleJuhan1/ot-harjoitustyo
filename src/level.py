@@ -1,4 +1,7 @@
 import pygame
+
+# Most of the the code in functions __init__() and _initialize_sprites() was originally created in the Sokoban-game project by Kalle Ilves: https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
+
 from sprites.floor import Floor
 from sprites.wall import Wall
 from sprites.worm import Worm
@@ -11,6 +14,7 @@ class Level:
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
         self.worm = None
+        #self.apple = None
         self.body = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
         self._initialize_sprites(level_map)
@@ -35,10 +39,13 @@ class Level:
                     self.floors.add(Floor(normalized_x, normalized_y))
                 elif cell == 3:
                     self.body.add(Body(normalized_x, normalized_y))
+                #elif cell == 4:
+                    #self.apple = Apple(normalized_x, normalized_y)
 
         self.all_sprites.add(
             self.floors,
             self.walls,
+            #self.apple
             self.worm,
             self.body
         )
@@ -48,10 +55,12 @@ class Level:
             self._move_worm()
         if pygame.sprite.spritecollide(self.worm, self.walls, False):
             return True
+        #if pygame.sprite.spritecollide(self.worm, self.apple, False):
+            #self._apple_eaten()
 
     def _move_worm(self):
         if self.worm_direction == "L":
-            self.worm.rect.move_ip(-50, 0)
+            self.worm.rect.move_ip(-50, 0) #Try later switching 50 to self.cell_size
         if self.worm_direction == "R":
             self.worm.rect.move_ip(50, 0)
         if self.worm_direction == "U":
@@ -59,3 +68,5 @@ class Level:
         if self.worm_direction == "D":
             self.worm.rect.move_ip(0, 50)
 
+    #def _apple_eaten(self):
+        #pass

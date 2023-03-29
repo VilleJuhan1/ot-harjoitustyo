@@ -1,4 +1,7 @@
 import pygame
+
+# The basic functionality of the program in main()-function was originally created by Kalle Ilves for Sokoban-game project: https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
+
 from level import Level
 from game_loop import GameLoop
 from event_queue import EventQueue
