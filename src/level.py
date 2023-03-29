@@ -3,6 +3,7 @@ from sprites.floor import Floor
 from sprites.wall import Wall
 from sprites.worm import Worm
 from sprites.body import Body
+#from sprites.apple import Apple
 
 class Level:
     def __init__(self, level_map, cell_size):

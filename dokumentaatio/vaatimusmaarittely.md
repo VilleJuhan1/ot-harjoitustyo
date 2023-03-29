@@ -27,7 +27,7 @@ kenttiä. Matoa ohjataan nuolinäppäimillä.
 
 - [ ] Tekstipohjainen käyttöliittymä
 - [ ] Paikalliseen tiedostoon tallentuvat ennätystulokset
-- [ ] Yksi pelattava kenttä, joka toimii yhdellä vaikeusasteella, kuten olettaa voi (liikkuminen, törmääminen, kasvaminen, hedelmien ilmestyminen ja pistelasku
+- [ ] Yksi pelattava kenttä, joka toimii yhdellä vaikeusasteella, kuten olettaa voi (liikkuminen, törmääminen, kasvaminen, hedelmien ilmestyminen ja pistelasku)
 - [ ] Perustoiminnallisuuksia testaavat automaattitestit
 
 ### Jatkokehittelyjä mahdollisuuksien mukaan
