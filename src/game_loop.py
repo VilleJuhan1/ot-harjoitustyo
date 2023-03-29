@@ -15,8 +15,9 @@ class GameLoop:
 
             current_time = self._clock.get_ticks()
 
+            self._level.update(current_time)
             self._render()
-            self._clock.tick(60)
+            self._clock.tick(5)
 
     def _handle_events(self):
         for event in self._event_queue.get():
@@ -29,8 +30,10 @@ class GameLoop:
                     self._level.worm_direction = "U"
                 if event.key == pygame.K_DOWN:
                     self._level.worm_direction = "D"
+                if event.key == pygame.K_ESCAPE:
+                    return False
             elif event.type == pygame.QUIT:
-                return False 
+                return False
 
     def _render(self):
         self._renderer.render()
