@@ -7,7 +7,7 @@ harjoitustehtäviä että oma ohjelmointiprojekti.
 
 Lisätietoa projektista ja sen etenemisestä löytyy [Dokumentaatio-kansiosta](https://github.com/VilleJuhan1/ot-harjoitustyo/tree/master/dokumentaatio).
 
-Ohjelmointiprojektin rakenteellisena runkona on käytetty kurssin [Sokoban-esimerkkiä](https://github.com/ohjelmistotekniikka-hy/pygame-sokoban)
+Ohjelmointiprojektin rakenteellisena runkona on käytetty kurssin [Sokoban-esimerkkiä](https://github.com/ohjelmistotekniikka-hy/pygame-sokoban).
 
 > The road to success is always under construction. -Lily Tomlin
 
