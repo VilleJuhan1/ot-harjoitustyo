@@ -1,11 +1,12 @@
 import unittest
+import pygame
 
 from level import Level
 
 LEVEL_MAP_1 = [[1, 1, 1, 1, 1],
                [1, 0, 0, 0, 1],
                [1, 0, 2, 0, 1],
-               [1, 0, 0, 0, 0],
+               [1, 4, 0, 0, 1],
                [1, 1, 1, 1, 1]]
 
 CELL_SIZE = 50
@@ -13,6 +14,7 @@ CELL_SIZE = 50
 class TestLevel(unittest.TestCase):
     def setUp(self):
         self.level = Level(LEVEL_MAP_1, CELL_SIZE)
+        self.worm = self.level.worm
 
     def assert_coordinates_equal(self, sprite, x, y):
         self.assertEqual(sprite.rect.x, x)

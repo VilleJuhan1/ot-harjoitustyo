@@ -38,8 +38,8 @@ class Level:
                 elif cell == 2:
                     self.worm = Worm(normalized_x, normalized_y)
                     self.floors.add(Floor(normalized_x, normalized_y))
-                elif cell == 3:
-                    self.body.add(Body(normalized_x, normalized_y))
+                #elif cell == 3:
+                #    self.body.add(Body(normalized_x, normalized_y))
                 elif cell == 4:
                     self.apple = Apple(normalized_x, normalized_y)
                     self.floors.add(Floor(normalized_x, normalized_y))                    
@@ -49,7 +49,7 @@ class Level:
             self.walls,
             self.apple,
             self.worm,
-            self.body
+            #self.body
         )
 
     # This function handles the collisions, movement and later growth of the worm.
