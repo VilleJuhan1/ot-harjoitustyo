@@ -9,6 +9,7 @@ class GameLoop:
         self._event_queue = event_queue
         self._clock = clock
         self._cell_size = cell_size
+        
 
     def start(self):
         while True:
