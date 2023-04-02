@@ -7,8 +7,8 @@ Ohjelmointiprojektin rakenteellisena runkona on käytetty kurssin [Sokoban-esime
 
 ## Snek-matopeli
 
-Peli on tällä hetkellä kehitysvaiheessa. Nykyisessä versiossa peli alkaa aloituskomennolla suoraan, minkä jälkeen "mato" on ohjattavissa nuolinäppäimillä.
-Törmäys punaiseen omenaan aiheuttaa omenan siirtymisen uuteen koordinaattiin. Törmäys seinään lopettaa pelin.
+Peli on tällä hetkellä kehitysvaiheessa. Nykyisessä versiossa peli alkaa aloituskomennolla, minkä jälkeen "mato" on ohjattavissa nuolinäppäimillä.
+Törmäys punaiseen omenaan aiheuttaa sen siirtymisen uuteen koordinaattiin. Törmäys seinään lopettaa pelin.
 
 ### Kontrollit
 
