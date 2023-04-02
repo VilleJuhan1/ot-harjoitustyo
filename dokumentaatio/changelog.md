@@ -7,3 +7,7 @@
 - Pelissä voi ohjata madon päätä nuolinäppäimillä
 - "Mato" liikkuu automaattisesti tietyin väliajoin viimeisimpänä rekisteröityyn suuntaan
 - Peli loppuu, kun "mato" osuu seinään
+
+**30.3.2022**
+
+- Pelin alussa kentälle syntyy omena, joka vaihtaa paikkaa satunnaiseen koordinaattiin kentällä törmäyksestä
