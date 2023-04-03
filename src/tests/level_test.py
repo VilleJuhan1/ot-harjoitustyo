@@ -11,10 +11,12 @@ LEVEL_MAP_1 = [[1, 1, 1, 1, 1],
 
 CELL_SIZE = 50
 
+height = len(LEVEL_MAP_1)
+width = len(LEVEL_MAP_1[0])
 
 class TestLevel(unittest.TestCase):
     def setUp(self):
-        self.level = Level(LEVEL_MAP_1, CELL_SIZE)
+        self.level = Level(LEVEL_MAP_1, CELL_SIZE, height, width)
         self.worm = self.level.worm
 
     def assert_coordinates_equal(self, sprite, x, y):

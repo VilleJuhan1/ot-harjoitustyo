@@ -1,8 +1,8 @@
 import random
 import pygame
 
-# Most of the the code in functions __init__() and _initialize_sprites() was
-# originally created in the Sokoban-game project by Kalle Ilves:
+# The original code in functions __init__() and _initialize_sprites() 
+# was created in the Sokoban-game project by Kalle Ilves:
 # https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
 
 from sprites.floor import Floor
@@ -13,8 +13,10 @@ from sprites.apple import Apple
 
 
 class Level:
-    def __init__(self, level_map, cell_size):
+    def __init__(self, level_map, cell_size, height, width):
         self.cell_size = cell_size
+        self.x_positions = self._determine_possible_apple_coordinates(width)
+        self.y_positions = self._determine_possible_apple_coordinates(height)
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
         self.worm = None
@@ -23,6 +25,12 @@ class Level:
         self.all_sprites = pygame.sprite.Group()
         self._initialize_sprites(level_map)
         self.worm_direction = "L"
+
+    def _determine_possible_apple_coordinates(self, width):
+        list = []
+        for n in range(1, width-1):
+            list.append(n * self.cell_size)
+        return list
 
     def _initialize_sprites(self, level_map):
         height = len(level_map)
@@ -68,20 +76,15 @@ class Level:
     # is stored in worm_direction.
     def _move_worm(self):
         if self.worm_direction == "L":
-            # Try later switching 50 to self.cell_size or something related to map.
-            self.worm.rect.move_ip(-50, 0)
+            self.worm.rect.move_ip(-self.cell_size, 0)
         if self.worm_direction == "R":
-            self.worm.rect.move_ip(50, 0)
+            self.worm.rect.move_ip(self.cell_size, 0)
         if self.worm_direction == "U":
-            self.worm.rect.move_ip(0, -50)
+            self.worm.rect.move_ip(0, -self.cell_size)
         if self.worm_direction == "D":
-            self.worm.rect.move_ip(0, 50)
+            self.worm.rect.move_ip(0, self.cell_size)
 
-    # For the time being, the new position is hard coded. Later should be able to
-    # adjust to level map.
+    # The apple spawns randomly inside the arena on every map
     def _apple_eaten(self):
-        positions_x = [50, 100, 150, 200, 250, 300, 350, 400,
-                       450, 500, 550, 600, 650, 700, 750, 800, 850, 900]
-        positions_y = [50, 100, 150, 200, 250, 300, 350, 400, 450]
         self.apple.rect.update(
-            (random.choice(positions_x), random.choice(positions_y)), (50, 50))
+            (random.choice(self.x_positions), random.choice(self.y_positions)), (50, 50))
