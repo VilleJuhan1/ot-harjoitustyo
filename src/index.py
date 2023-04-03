@@ -22,6 +22,7 @@ LEVEL_MAP = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 
 CELL_SIZE = 50
 
+
 def main():
     level_map = LEVEL_MAP
     height = len(level_map)
@@ -41,6 +42,6 @@ def main():
     pygame.init()
     game_loop.start()
 
+
 if __name__ == "__main__":
     main()
-

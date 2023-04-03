@@ -2,6 +2,7 @@ import pygame
 
 # The way GameLoop-class initializes and forms around other files in the program was originally created by Kalle Ilves in Sokoban-game project: https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
 
+
 class GameLoop:
     def __init__(self, level, renderer, event_queue, clock, cell_size):
         self._level = level
@@ -9,7 +10,6 @@ class GameLoop:
         self._event_queue = event_queue
         self._clock = clock
         self._cell_size = cell_size
-        
 
     def start(self):
         while True:

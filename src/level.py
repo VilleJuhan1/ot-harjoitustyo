@@ -9,6 +9,7 @@ from sprites.worm import Worm
 from sprites.body import Body
 from sprites.apple import Apple
 
+
 class Level:
     def __init__(self, level_map, cell_size):
         self.cell_size = cell_size
@@ -38,18 +39,18 @@ class Level:
                 elif cell == 2:
                     self.worm = Worm(normalized_x, normalized_y)
                     self.floors.add(Floor(normalized_x, normalized_y))
-                #elif cell == 3:
+                # elif cell == 3:
                 #    self.body.add(Body(normalized_x, normalized_y))
                 elif cell == 4:
                     self.apple = Apple(normalized_x, normalized_y)
-                    self.floors.add(Floor(normalized_x, normalized_y))                    
+                    self.floors.add(Floor(normalized_x, normalized_y))
 
         self.all_sprites.add(
             self.floors,
             self.walls,
             self.apple,
             self.worm,
-            #self.body
+            # self.body
         )
 
     # This function handles the collisions, movement and later growth of the worm.
@@ -64,7 +65,8 @@ class Level:
     # Worm moves in the set direction after certain time has passed, the direction is stored in worm_direction.
     def _move_worm(self):
         if self.worm_direction == "L":
-            self.worm.rect.move_ip(-50, 0) #Try later switching 50 to self.cell_size or something related to map.
+            # Try later switching 50 to self.cell_size or something related to map.
+            self.worm.rect.move_ip(-50, 0)
         if self.worm_direction == "R":
             self.worm.rect.move_ip(50, 0)
         if self.worm_direction == "U":
@@ -74,6 +76,8 @@ class Level:
 
     # For the time being, the new position is hard coded. Later should be able to adjust to level map.
     def _apple_eaten(self):
-        positions_x = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900]
+        positions_x = [50, 100, 150, 200, 250, 300, 350, 400,
+                       450, 500, 550, 600, 650, 700, 750, 800, 850, 900]
         positions_y = [50, 100, 150, 200, 250, 300, 350, 400, 450]
-        self.apple.rect.update((random.choice(positions_x), random.choice(positions_y)), (50, 50))
+        self.apple.rect.update(
+            (random.choice(positions_x), random.choice(positions_y)), (50, 50))
