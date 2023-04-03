@@ -1,6 +1,8 @@
 import pygame
 
-# The way GameLoop-class initializes and forms around other files in the program was originally created by Kalle Ilves in Sokoban-game project: https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
+# The way GameLoop-class initializes and forms around other files in the
+# program was originally created by Kalle Ilves in Sokoban-game project:
+# https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
 
 
 class GameLoop:
@@ -13,7 +15,7 @@ class GameLoop:
 
     def start(self):
         while True:
-            if self._handle_events() == False:
+            if self._handle_events() is False:
                 break
 
             current_time = self._clock.get_ticks()
@@ -25,20 +27,20 @@ class GameLoop:
             self._render()
             self._clock.tick(5)
 
-    def _handle_events(self):
+    def _handle_events(self): # pylint: disable=inconsistent-return-statements
         for event in self._event_queue.get():
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
+            if event.type == pygame.KEYDOWN: # pylint: disable=no-member
+                if event.key == pygame.K_LEFT: # pylint: disable=no-member
                     self._level.worm_direction = "L"
-                if event.key == pygame.K_RIGHT:
+                if event.key == pygame.K_RIGHT: # pylint: disable=no-member
                     self._level.worm_direction = "R"
-                if event.key == pygame.K_UP:
+                if event.key == pygame.K_UP: # pylint: disable=no-member
                     self._level.worm_direction = "U"
-                if event.key == pygame.K_DOWN:
+                if event.key == pygame.K_DOWN: # pylint: disable=no-member
                     self._level.worm_direction = "D"
-                if event.key == pygame.K_ESCAPE:
+                if event.key == pygame.K_ESCAPE: # pylint: disable=no-member
                     return False
-            elif event.type == pygame.QUIT:
+            elif event.type == pygame.QUIT: # pylint: disable=no-member
                 return False
 
     def _render(self):

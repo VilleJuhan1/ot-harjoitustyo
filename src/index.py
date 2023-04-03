@@ -1,6 +1,7 @@
 import pygame
 
-# The basic functionality of the program in main()-function was originally created by Kalle Ilves for Sokoban-game project: https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
+# The basic functionality of the program in the main()-function was originally created
+# by Kalle Ilves for Sokoban-game project: https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
 
 from level import Level
 from game_loop import GameLoop
@@ -39,7 +40,7 @@ def main():
     clock = Clock()
     game_loop = GameLoop(level, renderer, event_queue, clock, CELL_SIZE)
 
-    pygame.init()
+    pygame.init() # pylint: disable=no-member
     game_loop.start()
 
 
