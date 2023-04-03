@@ -3,7 +3,7 @@ from load_image import load_image
 
 
 class Body(pygame.sprite.Sprite):
-    def __init__(self, x_coordinate=0, y_coordinate=0):
+    def __init__(self, life, x_coordinate=0, y_coordinate=0):
         super().__init__()
 
         self.image = load_image("body.png")
@@ -11,3 +11,4 @@ class Body(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x_coordinate
         self.rect.y = y_coordinate
+        self.lifetime = life

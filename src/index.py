@@ -34,7 +34,7 @@ def main():
 
     pygame.display.set_caption("Snek")
 
-    level = Level(level_map, CELL_SIZE, height, width)
+    level = Level(level_map, CELL_SIZE)
     event_queue = EventQueue()
     renderer = Renderer(display, level)
     clock = Clock()

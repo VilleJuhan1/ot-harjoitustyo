@@ -16,7 +16,7 @@ width = len(LEVEL_MAP_1[0])
 
 class TestLevel(unittest.TestCase):
     def setUp(self):
-        self.level = Level(LEVEL_MAP_1, CELL_SIZE, height, width)
+        self.level = Level(LEVEL_MAP_1, CELL_SIZE)
         self.worm = self.level.worm
 
     def assert_coordinates_equal(self, sprite, x, y):

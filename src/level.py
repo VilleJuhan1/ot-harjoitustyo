@@ -1,7 +1,7 @@
 import random
 import pygame
 
-# The original code in functions __init__() and _initialize_sprites() 
+# The original code in functions __init__() and _initialize_sprites()
 # was created in the Sokoban-game project by Kalle Ilves:
 # https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
 
@@ -13,10 +13,11 @@ from sprites.apple import Apple
 
 
 class Level:
-    def __init__(self, level_map, cell_size, height, width):
+    # Too many instance attributes here, work on it.
+    def __init__(self, level_map, cell_size):
         self.cell_size = cell_size
-        self.x_positions = self._determine_possible_apple_coordinates(width)
-        self.y_positions = self._determine_possible_apple_coordinates(height)
+        self.x_positions = self._determine_possible_apple_coordinates(len(level_map[0]))
+        self.y_positions = self._determine_possible_apple_coordinates(len(level_map))
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
         self.worm = None
@@ -25,19 +26,19 @@ class Level:
         self.all_sprites = pygame.sprite.Group()
         self._initialize_sprites(level_map)
         self.worm_direction = "L"
+        self.body_life_time = 0
 
-    def _determine_possible_apple_coordinates(self, width):
-        list = []
-        for n in range(1, width-1):
-            list.append(n * self.cell_size)
-        return list
+    def _determine_possible_apple_coordinates(self, length):
+        temp_list = []
+        for n in range(1, length-1): # pylint: disable=invalid-name
+            temp_list.append(n * self.cell_size)
+        return temp_list
 
     def _initialize_sprites(self, level_map):
-        height = len(level_map)
-        width = len(level_map[0])
 
-        for number_of_y in range(height):
-            for number_of_x in range(width):
+
+        for number_of_y in range(len(level_map)):
+            for number_of_x in range(len(level_map[0])):
                 cell = level_map[number_of_y][number_of_x]
                 normalized_x = number_of_x * self.cell_size
                 normalized_y = number_of_y * self.cell_size
@@ -50,7 +51,9 @@ class Level:
                     self.worm = Worm(normalized_x, normalized_y)
                     self.floors.add(Floor(normalized_x, normalized_y))
                 # elif cell == 3:
-                #    self.body.add(Body(normalized_x, normalized_y))
+                #    self.body.add(Body(life, normalized_x, normalized_y))
+                # The body sprite should have a timed life and one should be
+                # spawned every time the head moves
                 elif cell == 4:
                     self.apple = Apple(normalized_x, normalized_y)
                     self.floors.add(Floor(normalized_x, normalized_y))
@@ -66,7 +69,11 @@ class Level:
     # This function handles the collisions, movement and later growth of the worm.
     def update(self, current_time): # pylint: disable=inconsistent-return-statements
         if self.worm.should_move(current_time):
+            x_coordinate = self.worm.rect.x
+            y_coordinate = self.worm.rect.y
             self._move_worm()
+            self._spawn_body_sprite(x_coordinate, y_coordinate)
+            self._kill_last_sprite()
         if pygame.sprite.spritecollide(self.worm, self.walls, False):
             return True
         if self.worm.rect.colliderect(self.apple.rect):
@@ -83,6 +90,17 @@ class Level:
             self.worm.rect.move_ip(0, -self.cell_size)
         if self.worm_direction == "D":
             self.worm.rect.move_ip(0, self.cell_size)
+
+    # This function spawns new body sprite after the head moves, or that's the plan
+    def _spawn_body_sprite(self, x_coordinate, y_coordinate):
+        if self.body_life_time == 0:
+            return
+
+    # This function effectively reduces the life of all body sprites by 1 thus
+    # "killing" the last one with updated lifetime of 0
+    # Still wondering if this is needed though... Maybe there's another way like deque
+    def _kill_last_sprite(self):
+        pass
 
     # The apple spawns randomly inside the arena on every map
     def _apple_eaten(self):
