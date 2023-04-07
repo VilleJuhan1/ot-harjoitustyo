@@ -1,6 +1,6 @@
 import pygame
 
-# The basic functionality of the program in the main()-function was originally created
+# The basic functionality of the program in the game()-function was originally created
 # by Kalle Ilves for Sokoban-game project: https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
 
 from level import Level
@@ -23,8 +23,18 @@ LEVEL_MAP = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 
 CELL_SIZE = 50
 
-
 def main():
+    pass
+
+    # In the beginning... The game will load into main menu where there are
+    # four options: Start game, choose level, check high scores and quit game
+    # Moving between the game loop, high score window and main menu will
+    # be done through this function.
+
+    # At the moment there is no other states and the game will load straight
+    # into a predetermined level.
+
+def game():
     level_map = LEVEL_MAP
     height = len(level_map)
     width = len(level_map[0])
@@ -45,4 +55,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    game()

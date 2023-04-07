@@ -16,3 +16,7 @@
 
 - Omena spawnaa kentästä riippumatta oikein
 - Madon vartaloon liittyvää koodia lisätty, mutta ei vielä vaikutusta pelitilanteeseen
+
+**7.4.2023**
+
+- Päävalikkoa on hahmoteltu erilliseen main_menu.py-tiedostoon. Se kuitenkin vaatii vielä rakenteellisen uudistuksen omaksi luokakseen.
