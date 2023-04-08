@@ -16,12 +16,14 @@ class Level:
     # Too many instance attributes here, work on it.
     def __init__(self, level_map, cell_size):
         self.cell_size = cell_size
-        self.x_positions = self._determine_possible_apple_coordinates(len(level_map[0]))
-        self.y_positions = self._determine_possible_apple_coordinates(len(level_map))
+        self.x_positions = self._determine_possible_apple_coordinates(
+            len(level_map[0]))
+        self.y_positions = self._determine_possible_apple_coordinates(
+            len(level_map))
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
-        #self.worm = None
-        #self.apple = None
+        # self.worm = None
+        # self.apple = None
         self.body = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
         self._initialize_sprites(level_map)
@@ -30,13 +32,12 @@ class Level:
 
     def _determine_possible_apple_coordinates(self, length):
         temp_list = []
-        for n in range(1, length-1): # pylint: disable=invalid-name
+        for n in range(1, length-1):  # pylint: disable=invalid-name
             temp_list.append(n * self.cell_size)
         return temp_list
 
     # This function initializes the chosen map (currently only one possible).
     def _initialize_sprites(self, level_map):
-
 
         for number_of_y in range(len(level_map)):
             for number_of_x in range(len(level_map[0])):
@@ -64,7 +65,7 @@ class Level:
         )
 
     # This function handles the collisions, movement and later growth of the worm.
-    def update(self, current_time): # pylint: disable=inconsistent-return-statements
+    def update(self, current_time):  # pylint: disable=inconsistent-return-statements
         if self.worm.should_move(current_time):
             x_coordinate = self.worm.rect.x
             y_coordinate = self.worm.rect.y
@@ -73,9 +74,9 @@ class Level:
 
         if pygame.sprite.spritecollide(self.worm, self.walls, False):
             return True
-        elif pygame.sprite.spritecollide(self.worm, self.body, False):
+        if pygame.sprite.spritecollide(self.worm, self.body, False):
             return True
-        elif self.worm.rect.colliderect(self.apple.rect):
+        if self.worm.rect.colliderect(self.apple.rect):
             self._apple_eaten()
         else:
             self._kill_last_sprite()

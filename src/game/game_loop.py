@@ -27,20 +27,20 @@ class GameLoop:
             self._render()
             self._clock.tick(5)
 
-    def _handle_events(self): # pylint: disable=inconsistent-return-statements
+    def _handle_events(self):  # pylint: disable=inconsistent-return-statements
         for event in self._event_queue.get():
-            if event.type == pygame.KEYDOWN: # pylint: disable=no-member
-                if event.key == pygame.K_LEFT: # pylint: disable=no-member
+            if event.type == pygame.KEYDOWN:  # pylint: disable=no-member
+                if event.key == pygame.K_LEFT:  # pylint: disable=no-member
                     self._level.worm_direction = "L"
-                if event.key == pygame.K_RIGHT: # pylint: disable=no-member
+                if event.key == pygame.K_RIGHT:  # pylint: disable=no-member
                     self._level.worm_direction = "R"
-                if event.key == pygame.K_UP: # pylint: disable=no-member
+                if event.key == pygame.K_UP:  # pylint: disable=no-member
                     self._level.worm_direction = "U"
-                if event.key == pygame.K_DOWN: # pylint: disable=no-member
+                if event.key == pygame.K_DOWN:  # pylint: disable=no-member
                     self._level.worm_direction = "D"
-                if event.key == pygame.K_ESCAPE: # pylint: disable=no-member
+                if event.key == pygame.K_ESCAPE:  # pylint: disable=no-member
                     return False
-            elif event.type == pygame.QUIT: # pylint: disable=no-member
+            elif event.type == pygame.QUIT:  # pylint: disable=no-member
                 return False
 
     def _render(self):
