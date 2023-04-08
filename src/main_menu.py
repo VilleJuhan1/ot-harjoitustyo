@@ -1,69 +1,79 @@
 import pygame
 from sprites.apple import Apple
 
-def main():
+class Menu:
+    def __init__(self):
+        pygame.init()
+        self.screen_width = 600
+        self.screen_height = 800
+        self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
+        self.clock = pygame.time.Clock()
+        self.font = pygame.font.Font("freesansbold.ttf", 50)
+        self.sprites = pygame.sprite.Group()
+        self.init_sprites()
+        self.choice = 1
 
-    # Need to work on the structure later, now just trying to get it work
-    pygame.init()
+    def init_sprites(self):
+        self.apple = Apple(self.screen_width // 6, (self.screen_height - 200) // 2 - 28)
+        self.sprites.add(self.apple)
 
-    screen_width = 600
-    screen_height = 800
+        self.new_game = self.font.render("New Game", True, (255,255,255))
+        self.new_GameRect = self.new_game.get_rect()
+        self.new_GameRect.center = (self.screen_width // 2, (self.screen_height - 200) // 2)
 
-    screen = pygame.display.set_mode((screen_width, screen_height))
-    clock = pygame.time.Clock()
-    font = pygame.font.Font("freesansbold.ttf", 50)
-    cursor_group = pygame.sprite.Group()
+        self.high_score = self.font.render("High Score", True, (255,255,255))
+        self.high_scoreRect = self.high_score.get_rect()
+        self.high_scoreRect.center = (self.screen_width // 2, self.screen_height // 2)
 
-    pygame.display.set_caption("Snek")
+        self.exit_game = self.font.render("Exit Game", True, (255,255,255))
+        self.exit_gameRect = self.exit_game.get_rect()
+        self.exit_gameRect.center = (self.screen_width // 2, (self.screen_height + 200) // 2) 
 
+    def loop(self):
+        game = False
+        while not game:
+            self.render()
+            game = self.get_events()
+        return
 
-    apple = Apple(screen_width // 6, (screen_height - 200) // 2 - 28)
-    cursor_group.add(apple)
-
-    choice = 1
-    while True:
+    def get_events(self):
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN: # pylint: disable=no-member
                 if event.key == pygame.K_DOWN: # pylint: disable=no-member
-                    if choice < 3:
-                        choice += 1
+                    if self.choice < 3:
+                        self.choice += 1
                 if event.key == pygame.K_UP: # pylint: disable=no-member
-                    if choice > 1:
-                        choice -= 1
-                if event.key == pygame.K_KP_ENTER: # pylint: disable=no-member
-                    pass
+                    if self.choice > 1:
+                        self.choice -= 1
+                if event.key == pygame.K_RETURN: # pylint: disable=no-member
+                    if self.choice == 1:
+                        return True
+                        exit()
+                    elif self.choice == 2:
+                        pass
+                    elif self.choice == 3:
+                        exit()
             if event.type == pygame.QUIT:
                 exit()
 
-        screen.fill((153, 193, 241))
+    def render(self):
+        pygame.display.set_caption("Snek")
+        self.screen.fill((153, 193, 241))
+        self.screen.blit(self.new_game, self.new_GameRect)
+        self.screen.blit(self.high_score, self.high_scoreRect)
+        self.screen.blit(self.exit_game, self.exit_gameRect)
 
-        new_game = font.render("New Game", True, (255,255,255))
-        new_GameRect = new_game.get_rect()
-        new_GameRect.center = (screen_width // 2, (screen_height - 200) // 2)
-        screen.blit(new_game, new_GameRect)
+        if self.choice == 1:
+            self.apple.rect.update((self.screen_width // 6, (self.screen_height - 200) // 2 - 28), (50, 50))
+        elif self.choice == 2:
+            self.apple.rect.update((self.screen_width // 6, (self.screen_height) // 2 - 28), (50, 50))   
+        elif self.choice == 3:
+            self.apple.rect.update((self.screen_width // 6, (self.screen_height + 200) // 2 - 28), (50, 50))                      
 
-        high_score = font.render("High Score", True, (255,255,255))
-        high_scoreRect = high_score.get_rect()
-        high_scoreRect.center = (screen_width // 2, screen_height // 2)
-        screen.blit(high_score, high_scoreRect)
-
-        exit_game = font.render("Exit Game", True, (255,255,255))
-        exit_gameRect = exit_game.get_rect()
-        exit_gameRect.center = (screen_width // 2, (screen_height + 200) // 2)
-        screen.blit(exit_game, exit_gameRect)
-
-        if choice == 1:
-            apple.rect.update((screen_width // 6, (screen_height - 200) // 2 - 28), (50, 50))
-        elif choice == 2:
-            apple.rect.update((screen_width // 6, (screen_height) // 2 - 28), (50, 50))   
-        elif choice == 3:
-            apple.rect.update((screen_width // 6, (screen_height + 200) // 2 - 28), (50, 50))                      
-
-        cursor_group.draw(screen)
-        pygame.display.set_caption(f"Snek: {choice}")
+        self.sprites.draw(self.screen)
         pygame.display.update()
-
-        clock.tick(60)
+        self.clock.tick(60)
 
 if __name__ == "__main__":
-    main()
+    app = Menu()
+    app.loop()

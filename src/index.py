@@ -8,6 +8,7 @@ from game_loop import GameLoop
 from event_queue import EventQueue
 from renderer import Renderer
 from clock import Clock
+from main_menu import Menu
 
 LEVEL_MAP = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
              [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -23,16 +24,13 @@ LEVEL_MAP = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 
 CELL_SIZE = 50
 
+# The menu functionality doesn't include high scores at the moment. However it does allow the user
+# to start a new game over and over or quit game all together.
 def main():
-    pass
-
-    # In the beginning... The game will load into main menu where there are
-    # four options: Start game, choose level, check high scores and quit game
-    # Moving between the game loop, high score window and main menu will
-    # be done through this function.
-
-    # At the moment there is no other states and the game will load straight
-    # into a predetermined level.
+    while True:
+        menu = Menu()        
+        menu.loop()
+        game()
 
 def game():
     level_map = LEVEL_MAP
@@ -55,4 +53,4 @@ def game():
 
 
 if __name__ == "__main__":
-    game()
+    main()
