@@ -34,6 +34,7 @@ class Level:
             temp_list.append(n * self.cell_size)
         return temp_list
 
+    # This function initializes the chosen map (currently only one possible).
     def _initialize_sprites(self, level_map):
 
 
@@ -50,14 +51,11 @@ class Level:
                 elif cell == 2:
                     self.worm = Worm(normalized_x, normalized_y)
                     self.floors.add(Floor(normalized_x, normalized_y))
-                # elif cell == 3:
-                #    self.body.add(Body(life, normalized_x, normalized_y))
-                # The body sprite should have a timed life and one should be
-                # spawned every time the head moves
                 elif cell == 4:
                     self.apple = Apple(normalized_x, normalized_y)
                     self.floors.add(Floor(normalized_x, normalized_y))
 
+        # Yeah this is not all sprites because the body is handled separately, work on this.
         self.all_sprites.add(
             self.floors,
             self.walls,

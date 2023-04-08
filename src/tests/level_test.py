@@ -1,7 +1,7 @@
 import unittest
 import pygame
 
-from level import Level
+from game.level import Level
 
 LEVEL_MAP_1 = [[1, 1, 1, 1, 1],
                [1, 0, 0, 0, 1],

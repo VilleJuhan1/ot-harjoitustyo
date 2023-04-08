@@ -3,24 +3,13 @@ import pygame
 # The basic functionality of the program in the game()-function was originally created
 # by Kalle Ilves for Sokoban-game project: https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
 
-from level import Level
-from game_loop import GameLoop
-from event_queue import EventQueue
-from renderer import Renderer
-from clock import Clock
-from main_menu import Menu
-
-LEVEL_MAP = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-             [1, 0, 0, 0, 0, 4, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-             [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
+from game.level import Level
+from game.game_loop import GameLoop
+from game.event_queue import EventQueue
+from game.renderer import Renderer
+from game.clock import Clock
+from game.maps import Maps
+from user_interface.main_menu import Menu
 
 CELL_SIZE = 50
 
@@ -33,7 +22,8 @@ def main():
         game()
 
 def game():
-    level_map = LEVEL_MAP
+    maps = Maps()
+    level_map = maps.level_one
     height = len(level_map)
     width = len(level_map[0])
     display_height = height * CELL_SIZE
