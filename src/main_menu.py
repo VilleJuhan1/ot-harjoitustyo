@@ -1,8 +1,10 @@
 import pygame
+import os
 from sprites.apple import Apple
 
 class Menu:
     def __init__(self):
+        os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (700,400)
         pygame.init()
         self.screen_width = 600
         self.screen_height = 800

@@ -8,7 +8,7 @@ import pygame
 from sprites.floor import Floor
 from sprites.wall import Wall
 from sprites.worm import Worm
-#from sprites.body import Body
+from sprites.body import Body
 from sprites.apple import Apple
 
 
@@ -20,13 +20,13 @@ class Level:
         self.y_positions = self._determine_possible_apple_coordinates(len(level_map))
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
-        self.worm = None
-        self.apple = None
+        #self.worm = None
+        #self.apple = None
         self.body = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
         self._initialize_sprites(level_map)
         self.worm_direction = "L"
-        self.body_life_time = 0
+        self.body_life_time = 4
 
     def _determine_possible_apple_coordinates(self, length):
         temp_list = []
@@ -63,7 +63,6 @@ class Level:
             self.walls,
             self.apple,
             self.worm,
-            # self.body
         )
 
     # This function handles the collisions, movement and later growth of the worm.
@@ -73,11 +72,15 @@ class Level:
             y_coordinate = self.worm.rect.y
             self._move_worm()
             self._spawn_body_sprite(x_coordinate, y_coordinate)
-            self._kill_last_sprite()
+
         if pygame.sprite.spritecollide(self.worm, self.walls, False):
             return True
-        if self.worm.rect.colliderect(self.apple.rect):
+        elif pygame.sprite.spritecollide(self.worm, self.body, False):
+            return True
+        elif self.worm.rect.colliderect(self.apple.rect):
             self._apple_eaten()
+        else:
+            self._kill_last_sprite()
 
     # Worm moves in the set direction after certain time has passed, the direction
     # is stored in worm_direction.
@@ -91,18 +94,20 @@ class Level:
         if self.worm_direction == "D":
             self.worm.rect.move_ip(0, self.cell_size)
 
-    # This function spawns new body sprite after the head moves, or that's the plan
+    # This function spawns new body sprite after the head moves
     def _spawn_body_sprite(self, x_coordinate, y_coordinate):
-        if self.body_life_time == 0:
-            return
+        self.body.add(Body(self.body_life_time, x_coordinate, y_coordinate))
 
     # This function effectively reduces the life of all body sprites by 1 thus
     # "killing" the last one with updated lifetime of 0
-    # Still wondering if this is needed though... Maybe there's another way like deque
     def _kill_last_sprite(self):
-        pass
+        for sprite in self.body:
+            sprite.lifetime -= 1
+            if sprite.lifetime == 0:
+                sprite.kill()
 
     # The apple spawns randomly inside the arena on every map
     def _apple_eaten(self):
         self.apple.rect.update(
             (random.choice(self.x_positions), random.choice(self.y_positions)), (50, 50))
+        self.body_life_time += 1
