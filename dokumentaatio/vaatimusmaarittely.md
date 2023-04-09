@@ -32,13 +32,13 @@ kenttiä. Matoa ohjataan nuolinäppäimillä.
 
 ### Jatkokehittelyjä mahdollisuuksien mukaan
 
-- [x]Graafinen aloitusvalikko
-- [ ]Vaikeusasteen vaihtaminen
-- [ ]Madon ulkoasun vaihtaminen
-- [ ]Kentän vaihtaminen
-- [ ]Globaali high score -lista
+- [x] Graafinen aloitusvalikko
+- [ ] Vaikeusasteen vaihtaminen
+- [ ] Madon ulkoasun vaihtaminen
+- [ ] Kentän vaihtaminen
+- [ ] Globaali high score -lista
 
 ### Toissijaisia, mutta kivoja tavoitteita
 
-- [ ]Kaksinpeli
-- [ ]Kenttäeditori
+- [ ] Kaksinpeli
+- [ ] Kenttäeditori
