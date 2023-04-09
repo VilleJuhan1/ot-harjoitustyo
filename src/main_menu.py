@@ -2,15 +2,13 @@ import os
 import pygame
 from sprites.apple import Apple
 
-
 class Menu:
-    def __init__(self):
+    def __init__(self, screen):
         os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (700, 400) # pylint: disable=consider-using-f-string
         pygame.init() # pylint: disable=no-member
-        self.screen_width = 600
+        self.screen = screen
+        self.screen_width = 650
         self.screen_height = 800
-        self.screen = pygame.display.set_mode(
-            (self.screen_width, self.screen_height))
         self.clock = pygame.time.Clock()
         self.font = pygame.font.Font("freesansbold.ttf", 50)
         self.sprites = pygame.sprite.Group()
@@ -85,5 +83,5 @@ class Menu:
 
 
 if __name__ == "__main__":
-    app = Menu()
+    app = Menu(pygame.display.set_mode((650, 800)))
     app.loop()
