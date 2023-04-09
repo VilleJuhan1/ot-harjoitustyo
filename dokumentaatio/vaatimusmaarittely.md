@@ -25,20 +25,20 @@ kenttiä. Matoa ohjataan nuolinäppäimillä.
 
 ### Perusversion toiminnallisuudet
 
-- [x] Graafinen käyttöliittymä
+- [*] Tekstipohjainen käyttöliittymä
 - [ ] Paikalliseen tiedostoon tallentuvat ennätystulokset
-- [x] Yksi pelattava kenttä, joka toimii yhdellä vaikeusasteella, kuten olettaa voi (liikkuminen, törmääminen, kasvaminen, hedelmien ilmestyminen ja pistelasku)
+- [*] Yksi pelattava kenttä, joka toimii yhdellä vaikeusasteella, kuten olettaa voi (liikkuminen, törmääminen, kasvaminen, hedelmien ilmestyminen ja pistelasku)
 - [ ] Perustoiminnallisuuksia testaavat automaattitestit
 
 ### Jatkokehittelyjä mahdollisuuksien mukaan
 
-- Graafinen aloitusvalikko
-- Vaikeusasteen vaihtaminen
-- Madon ulkoasun vaihtaminen
-- Kentän vaihtaminen
-- Globaali high score -lista
+- [*]Graafinen aloitusvalikko
+- [ ]Vaikeusasteen vaihtaminen
+- [ ]Madon ulkoasun vaihtaminen
+- [ ]Kentän vaihtaminen
+- [ ]Globaali high score -lista
 
 ### Toissijaisia, mutta kivoja tavoitteita
 
-- Kaksinpeli
-- Kenttäeditori
+- [ ]Kaksinpeli
+- [ ]Kenttäeditori

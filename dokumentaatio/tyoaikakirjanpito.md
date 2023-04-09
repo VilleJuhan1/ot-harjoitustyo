@@ -13,3 +13,5 @@
 | 2.4.  | 2h   | Asensin Pylint- ja autopep8-riippuvuudet projektiin. Siistin koodia Pylint-raportin pohjalta. Tein alustavia lisäyksiä body-spritejen
 |       |      | lisäämistä varten. Muokkasin omenan spawnaamiseen liittyvän koodin niin, että se toimii kentästä riippumatta.
 | 7.4.  | 2h   | Hahmottelin päävalikon alustavan koodin main_menu.py-tiedostoon
+| 8.4.  | 3h   | Integroin päävalikkotoiminnon osaksi muuta koodia
+| 9.4.  | 2h   | Parantelin päävalikon integraatiota niin, että peli ja valikko toimivat samassa Pygame-instanssissa / ruudussa
