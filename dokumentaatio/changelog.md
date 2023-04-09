@@ -17,10 +17,12 @@
 - Omena spawnaa kentästä riippumatta oikein
 - Madon vartaloon liittyvää koodia lisätty, mutta ei vielä vaikutusta pelitilanteeseen
 
+## Viikko 4
+
 **7.4.2023**
 
 - Päävalikkoa on hahmoteltu erilliseen main_menu.py-tiedostoon. Se kuitenkin vaatii vielä rakenteellisen uudistuksen omaksi luokakseen.
 
-**8.4.2023**
+**9.4.2023**
 
 - Päävalikko on integroitu onnistuneesti osaksi muuta peliä. Päävalikon toiminnallisuudet "New game" ja "Exit game" toimivat, kuten odottaa voi.
