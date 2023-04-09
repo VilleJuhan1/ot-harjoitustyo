@@ -107,6 +107,10 @@ class Level:
 
     # The apple spawns randomly inside the arena on every map
     def _apple_eaten(self):
-        self.apple.rect.update(
-            (random.choice(self.x_positions), random.choice(self.y_positions)), (50, 50))
+        while True:
+            self.apple.rect.update(
+               (random.choice(self.x_positions), random.choice(self.y_positions)), (50, 50))
+            if not pygame.sprite.spritecollide(self.apple, self.body, False):
+                break
+            
         self.body_life_time += 1

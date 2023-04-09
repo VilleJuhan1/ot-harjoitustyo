@@ -2,10 +2,12 @@ import os
 import pygame
 from sprites.apple import Apple
 
+
 class Menu:
     def __init__(self, screen):
-        os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (700, 400) # pylint: disable=consider-using-f-string
-        pygame.init() # pylint: disable=no-member
+        os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % ( # pylint: disable=consider-using-f-string
+            700, 400)  
+        pygame.init()  # pylint: disable=no-member
         self.screen = screen
         self.screen_width = 650
         self.screen_height = 800
@@ -42,7 +44,7 @@ class Menu:
             game = self.get_events()
 
     def get_events(self):
-        for event in pygame.event.get(): # pylint: disable=too-many-nested-blocks
+        for event in pygame.event.get():  # pylint: disable=too-many-nested-blocks
             if event.type == pygame.KEYDOWN:  # pylint: disable=no-member
                 if event.key == pygame.K_DOWN:  # pylint: disable=no-member
                     if self.choice < 3:
@@ -58,7 +60,7 @@ class Menu:
                     if self.choice == 3:
                         exit()  # pylint: disable=consider-using-sys-exit
             if event.type == pygame.QUIT:  # pylint: disable=no-member
-                exit() # pylint: disable=consider-using-sys-exit
+                exit()  # pylint: disable=consider-using-sys-exit
 
     def render(self):
         pygame.display.set_caption("Snek")
