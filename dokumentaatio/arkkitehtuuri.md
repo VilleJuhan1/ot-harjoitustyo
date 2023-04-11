@@ -1,3 +1,4 @@
+```mermaid
 ---
 title: Snek-matopeli
 ---
@@ -13,3 +14,4 @@ classDiagram
     Level <|.. Worm
     Level <|.. Maps
     Menu .. GameLoop
+```
