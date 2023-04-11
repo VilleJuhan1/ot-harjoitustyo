@@ -6,7 +6,7 @@ from sprites.apple import Apple
 class Menu:
     def __init__(self, screen):
         os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % ( # pylint: disable=consider-using-f-string
-            700, 400)  
+            700, 400)
         pygame.init()  # pylint: disable=no-member
         self.screen = screen
         self.screen_width = 650

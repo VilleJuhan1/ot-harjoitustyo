@@ -24,3 +24,5 @@ Ohjaa matoa ja päävalikon kursoria nuolinäppäimillä.
 > poetry run invoke start
 ##### Testaaminen
 > poetry run invoke coverage-report
+##### Pylint-tarkistusten tekeminen
+> poetry run invoke lint
