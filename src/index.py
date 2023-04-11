@@ -1,6 +1,6 @@
 import pygame
 
-# The basic functionality of the program in the game()-function was originally created
+# The basic functionality of the program in the main()-function was originally created
 # by Kalle Ilves for Sokoban-game project: https://github.com/ohjelmistotekniikka-hy/pygame-sokoban
 
 from game.level import Level

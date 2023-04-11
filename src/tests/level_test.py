@@ -39,3 +39,23 @@ class TestLevel(unittest.TestCase):
         self.level._move_worm()
         self.assert_coordinates_equal(
             self.level.worm, 2 * CELL_SIZE, 1 * CELL_SIZE)
+        
+    def test_worm_moves_down(self):
+        self.level.worm_direction = "D"
+
+        self.level._move_worm()
+        self.assert_coordinates_equal(
+            self.level.worm, 2 * CELL_SIZE, 3 * CELL_SIZE)
+        
+    def test_worm_collides_with_apple(self):
+        self.level.worm_direction = "L"
+        self.level._move_worm()
+        self.level.worm_direction = "D"
+        self.level._move_worm()
+        self.assertEqual(self.worm.rect.colliderect(self.level.apple.rect), True)
+
+    def test_worm_collides_with_walls(self):
+        self.level.worm_direction = "L"
+        self.level._move_worm()
+        self.level._move_worm()
+        self.assertEqual(self.level.update(0), True)
