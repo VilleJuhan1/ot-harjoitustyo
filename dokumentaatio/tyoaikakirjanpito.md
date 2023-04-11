@@ -15,3 +15,4 @@
 | 7.4.  | 2h   | Hahmottelin päävalikon alustavan koodin main_menu.py-tiedostoon
 | 8.4.  | 3h   | Integroin päävalikkotoiminnon osaksi muuta koodia
 | 9.4.  | 2h   | Parantelin päävalikon integraatiota niin, että peli ja valikko toimivat samassa Pygame-instanssissa / ruudussa
+| 10.4. | 2h   | Kirjoitin lisää testejä, rakensin luokkakaavion pelin tämänhetkisistä toiminnallisuuksista
