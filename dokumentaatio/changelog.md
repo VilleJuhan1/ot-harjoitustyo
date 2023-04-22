@@ -26,3 +26,9 @@
 **9.4.2023**
 
 - Päävalikko on integroitu onnistuneesti osaksi muuta peliä. Päävalikon toiminnallisuudet "New game" ja "Exit game" toimivat, kuten odottaa voi.
+
+## Viikko 5
+
+**22.4.2023**
+
+- Päävalikossa toimii nyt myös High score -valikko, josta pääsee pois mitä tahansa nappia painamalla. Tulokset eivät vielä päivity.
