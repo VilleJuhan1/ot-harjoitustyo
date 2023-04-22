@@ -7,6 +7,7 @@ class Renderer:
         self._level = level
 
     def render(self):
+        pygame.display.set_caption("Snek")        
         self._level.all_sprites.draw(self._display)
         self._level.body.draw(self._display)
         pygame.display.update()

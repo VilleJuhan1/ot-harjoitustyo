@@ -1,11 +1,12 @@
 import os
 import pygame
 from sprites.apple import Apple
+from menu.highscore import Highscore
 
 
 class Menu:
     def __init__(self, screen):
-        os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % ( # pylint: disable=consider-using-f-string
+        os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (  # pylint: disable=consider-using-f-string
             700, 400)
         pygame.init()  # pylint: disable=no-member
         self.screen = screen
@@ -16,6 +17,7 @@ class Menu:
         self.sprites = pygame.sprite.Group()
         self.init_sprites()
         self.choice = 1
+        self.highscore = Highscore()
 
     def init_sprites(self):
         self.apple = Apple(self.screen_width // 6,
@@ -38,10 +40,15 @@ class Menu:
             self.screen_width // 2, (self.screen_height + 200) // 2)
 
     def loop(self):
-        game = False
-        while not game:
+        chosen = None
+        while chosen != "game":
             self.render()
-            game = self.get_events()
+            chosen = self.get_events()
+            if chosen == "score":
+                self.highscore = Highscore(
+                    self.screen, self.screen_width, self.screen_height)
+                self.highscore.show()
+                chosen = None
 
     def get_events(self):
         for event in pygame.event.get():  # pylint: disable=too-many-nested-blocks
@@ -54,16 +61,16 @@ class Menu:
                         self.choice -= 1
                 if event.key == pygame.K_RETURN:  # pylint: disable=no-member
                     if self.choice == 1:
-                        return True
+                        return "game"
                     if self.choice == 2:
-                        pass
+                        return "score"
                     if self.choice == 3:
                         exit()  # pylint: disable=consider-using-sys-exit
             if event.type == pygame.QUIT:  # pylint: disable=no-member
                 exit()  # pylint: disable=consider-using-sys-exit
 
     def render(self):
-        pygame.display.set_caption("Snek")
+        pygame.display.set_caption("Main menu")
         self.screen.fill((153, 193, 241))
         self.screen.blit(self.new_game, self.new_game_rect)
         self.screen.blit(self.high_score, self.high_score_rect)

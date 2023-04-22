@@ -109,7 +109,7 @@ class Level:
     def _apple_eaten(self):
         while True:
             self.apple.rect.update(
-               (random.choice(self.x_positions), random.choice(self.y_positions)), (50, 50))
+                (random.choice(self.x_positions), random.choice(self.y_positions)), (50, 50))
             if not pygame.sprite.spritecollide(self.apple, self.body, False):
                 break
 
