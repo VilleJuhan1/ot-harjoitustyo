@@ -28,6 +28,8 @@ tapahtuu millä tahansa näppäimellä.
 
 [Viikko 5](https://github.com/VilleJuhan1/ot-harjoitustyo/releases/tag/viikko5)
 
+### Tarvittavat komennot
+
 ##### Asennus
 > poetry install
 ##### Suorittaminen
