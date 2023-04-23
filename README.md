@@ -10,7 +10,7 @@ Pelin rakenteellisena runkona on käytetty kurssin [Sokoban-esimerkkiä](https:/
 Peli on tällä hetkellä kehitysvaiheessa. Aloituskomennolla peli käynnistyy päävalikkoon, josta voi joko aloittaa uuden pelin tai poistua pelistä.
 Pelin tarkoituksena on kerätä punaisia omenoita ja välttää törmäyksiä madon häntään ja seiniin. Tavoitteena on kasvaa mahdollisimman suureksi.
 
-Uusimpana ominaisuutena peliin on lisätty toimiva(hko) ennätystaulu, jonka voi myös halutessaan resetoida.
+Uusimpana ominaisuutena peliin on lisätty toimiva(hko) ennätystaulu, jonka voi myös halutessaan resetoida käyttäen oheista poetry-komentoa.
 
 ### Kontrollit
 
