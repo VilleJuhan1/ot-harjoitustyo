@@ -17,3 +17,4 @@
 | 9.4.  | 2h   | Parantelin päävalikon integraatiota niin, että peli ja valikko toimivat samassa Pygame-instanssissa / ruudussa
 | 10.4. | 2h   | Kirjoitin lisää testejä, rakensin luokkakaavion pelin tämänhetkisistä toiminnallisuuksista
 | 22.4. | 4h   | Kirjoitin alustavan koodin high score -valikolle niin, että se lukee tiedot scores.txt-tiedostosta. Korjailin pylintin nostamat uudet virheet.
+| 23.4. | 3h   | Muokkasin high score -valikkoa niin, että myös tiedon kirjoittaminen sinne onnistuu. Korjailin pylint-virheet. Tein uuden kaavion kuvaamaan pelisilmukkaa.

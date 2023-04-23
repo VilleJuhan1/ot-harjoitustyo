@@ -50,7 +50,7 @@ class Menu:
                 self.highscore.show()
                 chosen = None
 
-    def get_events(self):
+    def get_events(self):  # pylint: disable=inconsistent-return-statements
         for event in pygame.event.get():  # pylint: disable=too-many-nested-blocks
             if event.type == pygame.KEYDOWN:  # pylint: disable=no-member
                 if event.key == pygame.K_DOWN:  # pylint: disable=no-member

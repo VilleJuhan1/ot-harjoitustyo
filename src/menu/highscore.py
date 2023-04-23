@@ -3,9 +3,10 @@ import pygame
 
 test_screen = pygame.display.set_mode((650, 800))
 
+
 class Highscore:
-    def __init__(self, screen = test_screen, width = 650, height = 800):
-        pygame.init()
+    def __init__(self, screen=test_screen, width=650, height=800):
+        pygame.init()  # pylint: disable=no-member
         self.scores = self.read_file()
         self.screen = screen
         self.screen_proportions = (width, height)
@@ -13,9 +14,9 @@ class Highscore:
         self.font = pygame.font.Font("freesansbold.ttf", 50)
         self.create_sprites(width, height)
 
-    def read_file(self, file_name = "src/menu/scores.txt"):
+    def read_file(self, file_name="src/menu/scores.txt"):
         highscore_list = []
-        with open(file_name, "r") as file:
+        with open(file_name, "r", encoding="utf-8") as file:
             for line in file:
                 line = line.split(":")
                 name = line[0]
@@ -24,18 +25,19 @@ class Highscore:
 
         return highscore_list
 
-    def write_file(self, file_name, player = "Tester", score = 350):
+    def write_file(self, file_name, player="Tester", score=350):
         self.scores.append((player, score))
-        self.scores.sort(key = lambda i:i[1], reverse = True)
-        with open(file_name, "w") as file:
+        self.scores.sort(key=lambda i: i[1], reverse=True)
+        with open(file_name, "w", encoding="utf-8") as file:
             for item in self.scores[:5]:
                 file.write(f"{item[0]}:{item[1]}\n")
 
-    def create_sprites(self, screen_width = 650, screen_height = 800):
+    def create_sprites(self, screen_width=650, screen_height=800):
         self.header = self.font.render(
             "Most competent worms", True, (255, 255, 255))
         self.header_rect = self.header.get_rect()
-        self.header_rect.center = (screen_width // 2, (screen_height - 600) // 2)
+        self.header_rect.center = (
+            screen_width // 2, (screen_height - 600) // 2)
 
         self.first = self.font.render(
             f"1. {self.scores[0][0]} {self.scores[0][1]}", True, (255, 255, 255))
@@ -71,12 +73,13 @@ class Highscore:
         self.screen.blit(self.fifth, (relative_x, 3 * relative_y))
         pygame.display.update()
 
-    def get_events(self):
+    def get_events(self):  # pylint: disable=inconsistent-return-statements
         for event in pygame.event.get():  # pylint: disable=too-many-nested-blocks
             if event.type == pygame.KEYDOWN:  # pylint: disable=no-member
-                return False # pylint: disable=inconsistent-return-statements
+                return False  # pylint: disable=inconsistent-return-statements
             if event.type == pygame.QUIT:  # pylint: disable=no-member
                 exit()  # pylint: disable=consider-using-sys-exit
+
 
 if __name__ == "__main__":
     test = Highscore()

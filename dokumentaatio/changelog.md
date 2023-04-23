@@ -1,4 +1,35 @@
+
+## Viikko 5
+
+**23.4.2023**
+
+- High score -lista toimii siten, että pelaajan tulokset tallentuvat sinne nimellä "Player"
+- Ennätystulokset voi resetoida käyttämällä poetry-komentoa
+
+**22.4.2023**
+
+- Päävalikossa toimii nyt myös High score -valikko, josta pääsee pois mitä tahansa nappia painamalla. Tulokset eivät vielä päivity.
+
+## Viikko 4
+
+**9.4.2023**
+
+- Päävalikko on integroitu onnistuneesti osaksi muuta peliä. Päävalikon toiminnallisuudet "New game" ja "Exit game" toimivat, kuten odottaa voi.
+
+**7.4.2023**
+
+- Päävalikkoa on hahmoteltu erilliseen main_menu.py-tiedostoon. Se kuitenkin vaatii vielä rakenteellisen uudistuksen omaksi luokakseen.
+
 ## Viikko 3
+
+**2.4.2023**
+
+- Omena spawnaa kentästä riippumatta oikein
+- Madon vartaloon liittyvää koodia lisätty, mutta ei vielä vaikutusta pelitilanteeseen
+
+**30.3.2023**
+
+- Pelin alussa kentälle syntyy omena, joka vaihtaa paikkaa satunnaiseen koordinaattiin kentällä törmäyksestä
 
 **29.3.2023**
 
@@ -7,28 +38,3 @@
 - Pelissä voi ohjata madon päätä nuolinäppäimillä
 - "Mato" liikkuu automaattisesti tietyin väliajoin viimeisimpänä rekisteröityyn suuntaan
 - Peli loppuu, kun "mato" osuu seinään
-
-**30.3.2023**
-
-- Pelin alussa kentälle syntyy omena, joka vaihtaa paikkaa satunnaiseen koordinaattiin kentällä törmäyksestä
-
-**2.4.2023**
-
-- Omena spawnaa kentästä riippumatta oikein
-- Madon vartaloon liittyvää koodia lisätty, mutta ei vielä vaikutusta pelitilanteeseen
-
-## Viikko 4
-
-**7.4.2023**
-
-- Päävalikkoa on hahmoteltu erilliseen main_menu.py-tiedostoon. Se kuitenkin vaatii vielä rakenteellisen uudistuksen omaksi luokakseen.
-
-**9.4.2023**
-
-- Päävalikko on integroitu onnistuneesti osaksi muuta peliä. Päävalikon toiminnallisuudet "New game" ja "Exit game" toimivat, kuten odottaa voi.
-
-## Viikko 5
-
-**22.4.2023**
-
-- Päävalikossa toimii nyt myös High score -valikko, josta pääsee pois mitä tahansa nappia painamalla. Tulokset eivät vielä päivity.

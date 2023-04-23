@@ -22,8 +22,6 @@ class Level:
             len(level_map))
         self.walls = pygame.sprite.Group()
         self.floors = pygame.sprite.Group()
-        # self.worm = None
-        # self.apple = None
         self.body = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
         self._initialize_sprites(level_map)
@@ -39,8 +37,9 @@ class Level:
 
     # This function initializes the chosen map (currently only one possible).
     def _initialize_sprites(self, level_map):
+        # pylint: disable=consider-using-enumerate
 
-        for number_of_y in range(len(level_map)):
+        for number_of_y in range(len(level_map)): # pylint: disable=inconsistent-return-statements
             for number_of_x in range(len(level_map[0])):
                 cell = level_map[number_of_y][number_of_x]
                 normalized_x = number_of_x * self.cell_size

@@ -10,9 +10,12 @@ Pelin rakenteellisena runkona on käytetty kurssin [Sokoban-esimerkkiä](https:/
 Peli on tällä hetkellä kehitysvaiheessa. Aloituskomennolla peli käynnistyy päävalikkoon, josta voi joko aloittaa uuden pelin tai poistua pelistä.
 Pelin tarkoituksena on kerätä punaisia omenoita ja välttää törmäyksiä madon häntään ja seiniin. Tavoitteena on kasvaa mahdollisimman suureksi.
 
+Uusimpana ominaisuutena peliin on lisätty toimiva(hko) ennätystaulu, jonka voi myös halutessaan resetoida.
+
 ### Kontrollit
 
-Ohjaa matoa ja päävalikon kursoria nuolinäppäimillä.
+Ohjaa matoa ja päävalikon kursoria nuolinäppäimillä. Halutessasi voit poistua pelistä ESC-näppäimellä. Ennätystulostaulusta poistuminen
+tapahtuu millä tahansa näppäimellä.
 
 ### Dokumentaatio
 * [Alustava määrittelydokumentti](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
@@ -27,3 +30,5 @@ Ohjaa matoa ja päävalikon kursoria nuolinäppäimillä.
 > poetry run invoke coverage-report
 ##### Pylint-tarkistusten tekeminen
 > poetry run invoke lint
+##### Ennätystaulun alustaminen
+> poetry run invoke reset-score

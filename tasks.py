@@ -23,3 +23,7 @@ def lint(ctx):
 @task
 def reset_score(ctx):
     ctx.run("python3 src/menu/reset_highscore.py")
+
+@task
+def autopep(ctx):
+    ctx.run("autopep8 --in-place --recursive src")

@@ -24,7 +24,8 @@ class GameLoop:
 
             collision = self._level.update(current_time)
             if collision:
-                self._highscore.write_file("src/menu/scores.txt", "Player", self._level.points)
+                self._highscore.write_file(
+                    "src/menu/scores.txt", "Player", self._level.points)
                 break
 
             self._render()

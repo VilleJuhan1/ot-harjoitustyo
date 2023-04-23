@@ -7,7 +7,7 @@ class Renderer:
         self._level = level
 
     def render(self):
-        pygame.display.set_caption(f"Points: {self._level.points}")        
+        pygame.display.set_caption(f"Points: {self._level.points}")
         self._level.all_sprites.draw(self._display)
         self._level.body.draw(self._display)
         pygame.display.update()

@@ -13,9 +13,6 @@ from main_menu import Menu
 
 CELL_SIZE = 50
 
-# The menu functionality doesn't include high scores at the moment. However it does allow the user
-# to start a new game over and over or quit game all together.
-
 
 def main():
     maps = Maps()

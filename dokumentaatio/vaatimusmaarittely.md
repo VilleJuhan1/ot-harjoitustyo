@@ -26,9 +26,9 @@ kenttiä. Matoa ohjataan nuolinäppäimillä.
 ### Perusversion toiminnallisuudet
 
 - [x] Tekstipohjainen käyttöliittymä
-- [ ] Paikalliseen tiedostoon tallentuvat ennätystulokset
+- [x] Paikalliseen tiedostoon tallentuvat ennätystulokset
 - [x] Yksi pelattava kenttä, joka toimii yhdellä vaikeusasteella, kuten olettaa voi (liikkuminen, törmääminen, kasvaminen, hedelmien ilmestyminen ja pistelasku)
-- [ ] Perustoiminnallisuuksia testaavat automaattitestit
+- [x] Perustoiminnallisuuksia testaavat automaattitestit
 
 ### Jatkokehittelyjä mahdollisuuksien mukaan
 
