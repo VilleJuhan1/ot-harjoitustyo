@@ -18,10 +18,16 @@ Ohjaa matoa ja päävalikon kursoria nuolinäppäimillä. Halutessasi voit poist
 tapahtuu millä tahansa näppäimellä.
 
 ### Dokumentaatio
+
 * [Alustava määrittelydokumentti](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [Työaikakirjanpito](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 * [Changelog](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 * [Arkkitehtuuri](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+### Julkaistut versiot
+
+[Viikko 5](https://github.com/VilleJuhan1/ot-harjoitustyo/releases/tag/viikko5)
+
 ##### Asennus
 > poetry install
 ##### Suorittaminen
