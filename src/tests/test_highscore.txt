@@ -2,4 +2,4 @@ Mauno:500
 Rauno:400
 Pauli:300
 Rauni:200
-Player:120
+Paavo:100

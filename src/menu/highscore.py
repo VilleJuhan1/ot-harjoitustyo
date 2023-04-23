@@ -13,9 +13,9 @@ class Highscore:
         self.font = pygame.font.Font("freesansbold.ttf", 50)
         self.create_sprites(width, height)
 
-    def read_file(self):
+    def read_file(self, file_name = "src/menu/scores.txt"):
         highscore_list = []
-        with open("src/menu/scores.txt", "r") as file:
+        with open(file_name, "r") as file:
             for line in file:
                 line = line.split(":")
                 name = line[0]

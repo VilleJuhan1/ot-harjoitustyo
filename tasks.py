@@ -19,3 +19,7 @@ def coverage_report(ctx):
 @task
 def lint(ctx):
     ctx.run("pylint src")
+
+@task
+def reset_score(ctx):
+    ctx.run("python3 src/menu/reset_highscore.py")
