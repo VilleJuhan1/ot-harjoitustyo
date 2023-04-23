@@ -20,12 +20,16 @@ class Highscore:
                 line = line.split(":")
                 name = line[0]
                 score = line[1].split()[0]
-                highscore_list.append((name, score))
+                highscore_list.append((name, int(score)))
 
         return highscore_list
 
-    def write_file(self):
-        pass
+    def write_file(self, file_name, player = "Tester", score = 350):
+        self.scores.append((player, score))
+        self.scores.sort(key = lambda i:i[1], reverse = True)
+        with open(file_name, "w") as file:
+            for item in self.scores[:5]:
+                file.write(f"{item[0]}:{item[1]}\n")
 
     def create_sprites(self, screen_width = 650, screen_height = 800):
         self.header = self.font.render(

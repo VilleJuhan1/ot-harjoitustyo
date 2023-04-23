@@ -1,4 +1,5 @@
 import pygame
+from menu.highscore import Highscore
 
 # The way GameLoop-class initializes and forms around other files in the
 # program was originally created by Kalle Ilves in Sokoban-game project:
@@ -12,6 +13,7 @@ class GameLoop:
         self._event_queue = event_queue
         self._clock = clock
         self._cell_size = cell_size
+        self._highscore = Highscore()
 
     def start(self):
         while True:
@@ -22,6 +24,7 @@ class GameLoop:
 
             collision = self._level.update(current_time)
             if collision:
+                self._highscore.write_file("src/menu/scores.txt", "Player", self._level.points)
                 break
 
             self._render()

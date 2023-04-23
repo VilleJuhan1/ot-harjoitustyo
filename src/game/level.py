@@ -29,6 +29,7 @@ class Level:
         self._initialize_sprites(level_map)
         self.worm_direction = "L"
         self.body_life_time = 4
+        self.points = 0
 
     def _determine_possible_apple_coordinates(self, length):
         temp_list = []
@@ -107,6 +108,7 @@ class Level:
 
     # The apple spawns randomly inside the arena on every map
     def _apple_eaten(self):
+        self.points += 10
         while True:
             self.apple.rect.update(
                 (random.choice(self.x_positions), random.choice(self.y_positions)), (50, 50))
