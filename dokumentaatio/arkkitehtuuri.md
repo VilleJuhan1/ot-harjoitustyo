@@ -1,9 +1,6 @@
 # Sovellusarkkitehtuuri
 
 ```mermaid
----
-title: Kokonaisuus
----
 classDiagram
     GameLoop <|.. Level
     GameLoop <|.. Renderer
@@ -18,4 +15,26 @@ classDiagram
     Level <|.. Maps
     Menu .. GameLoop
     Menu .. HighScore
+```
+
+## Sekvenssikaavio, joka kuvaa pelin käynnistämistä, pelin aloittamista ja palaamista päävalikkoon
+
+```mermaid
+sequenceDiagram
+    participant Index
+    participant Menu
+    participant GameLoop
+    participant HighScore
+    sequenceDiagram
+    participant Index
+    participant Menu
+    participant GameLoop
+    participant HighScore
+    loop
+    Index->>Menu: loop()
+    Menu->>Index: 
+    Index->>GameLoop: start()
+    GameLoop->>HighScore: write_file()
+    HighScore->>Index: 
+    end
 ```
