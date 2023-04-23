@@ -1,4 +1,4 @@
-# Sovellusarkkitehtuuri
+### Sovellusarkkitehtuuri
 
 ```mermaid
 classDiagram
@@ -17,7 +17,7 @@ classDiagram
     Menu .. HighScore
 ```
 
-## Sekvenssikaavio, joka kuvaa pelin käynnistämistä, pelin aloittamista ja palaamista päävalikkoon
+### Sekvenssikaavio, joka kuvaa ohjelman käynnistämistä, pelin aloittamista ja palaamista päävalikkoon
 
 ```mermaid
 sequenceDiagram
