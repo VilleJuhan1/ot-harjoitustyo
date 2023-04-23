@@ -2,13 +2,14 @@
 
 ```mermaid
 ---
-title: Snek-matopeli
+title: Kokonaisuus
 ---
 classDiagram
     GameLoop <|.. Level
     GameLoop <|.. Renderer
     GameLoop <|.. EventQueue
     GameLoop <|.. Clock
+    GameLoop <|.. HighScore
     Level <|.. Apple
     Level <|.. Body
     Level <|.. Floor
@@ -16,4 +17,5 @@ classDiagram
     Level <|.. Worm
     Level <|.. Maps
     Menu .. GameLoop
+    Menu .. HighScore
 ```
