@@ -9,7 +9,7 @@ classDiagram
     GameLoop <|.. Renderer
     GameLoop <|.. EventQueue
     GameLoop <|.. Clock
-    GameLoop <|.. HighScore
+    HighScore <|.. GameLoop
     Level <|.. Apple
     Level <|.. Body
     Level <|.. Floor
