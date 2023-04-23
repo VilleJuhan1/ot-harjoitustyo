@@ -25,11 +25,6 @@ sequenceDiagram
     participant Menu
     participant GameLoop
     participant HighScore
-    sequenceDiagram
-    participant Index
-    participant Menu
-    participant GameLoop
-    participant HighScore
     loop
     Index->>Menu: loop()
     Menu->>Index: 
