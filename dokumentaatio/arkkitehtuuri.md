@@ -27,6 +27,8 @@ sequenceDiagram
     participant HighScore
     loop
     Index->>Menu: loop()
+    Menu-->>HighScore: show()
+    HighScore-->>Menu: 
     Menu->>Index: 
     Index->>GameLoop: start()
     GameLoop->>HighScore: write_file()
