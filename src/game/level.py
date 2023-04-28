@@ -14,7 +14,28 @@ from sprites.apple import Apple
 
 class Level:
     # Too many instance attributes here, work on it.
+    """Handles the sprites, events and possible collisions in one game session.
+
+    Attributes:
+        cell_size = The width and length of one sprite in game
+        x_positions = The x-coordinates where the apple can spawn
+        y_positions = the y-coordinates where the apple can spawn
+        walls = pygame.sprite.Group containing all Wall-objects as sprites
+        floors = pygame.sprite.Group containing all Floor-objects as sprites
+        body = pygame.sprite.Group containing all Body-objects of the worm as sprites
+        all_sprites = pygame.sprite.Group containing all aforementioned sprite groups
+        self.worm_direction = Determines the direction of the worm (L,R,U,D)
+        self.body_life_time = How long a Body-object stays alive (turns/loops)
+        points = Counts the points of a single game
+
+    """
     def __init__(self, level_map, cell_size):
+        """Constructs the Level-object
+
+        Args:
+            level_map (list): A table containing the initial locations of sprites
+            cell_size (int): The size of a single cell in game in pixels
+        """
         self.cell_size = cell_size
         self.x_positions = self._determine_possible_apple_coordinates(
             len(level_map[0]))
