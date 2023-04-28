@@ -1,5 +1,5 @@
-Mauno:500
-Rauno:400
-Player:380
+Veikko:500
+A-O:400
 Pauli:300
 Rauni:200
+Paavo:100
