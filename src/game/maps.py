@@ -14,6 +14,7 @@ class Maps:
     Attributes:
         level_one = A table of the first playable map
     """
+
     def __init__(self):
         """Constructs a pool of maps usable by the game
         """

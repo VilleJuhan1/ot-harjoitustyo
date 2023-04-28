@@ -29,6 +29,7 @@ class Level:
         points = Counts the points of a single game
 
     """
+
     def __init__(self, level_map, cell_size):
         """Constructs the Level-object
 
@@ -51,16 +52,32 @@ class Level:
         self.points = 0
 
     def _determine_possible_apple_coordinates(self, length):
+        """Counts the coordinates where the apple can spawn in current map.
+
+        Args:
+            length (int): The length of the dimensions in the table (x or y)
+
+        Returns:
+            temp_list(list): A list containing all the possible spawn spots related
+            to dimension in question
+        """
         temp_list = []
         for n in range(1, length-1):  # pylint: disable=invalid-name
             temp_list.append(n * self.cell_size)
         return temp_list
 
-    # This function initializes the chosen map (currently only one possible).
     def _initialize_sprites(self, level_map):
+        """Goes through the level_map-table and initializes sprites accordingly.
+
+        Adds all sprites (except body) to sprite group all_sprites.
+
+        Args:
+            level_map (Maps): A 2-dimensional table containing information on where
+            to spawn different elements in the game
+        """
         # pylint: disable=consider-using-enumerate
 
-        for number_of_y in range(len(level_map)): # pylint: disable=inconsistent-return-statements
+        for number_of_y in range(len(level_map)):  # pylint: disable=inconsistent-return-statements
             for number_of_x in range(len(level_map[0])):
                 cell = level_map[number_of_y][number_of_x]
                 normalized_x = number_of_x * self.cell_size
@@ -77,7 +94,6 @@ class Level:
                     self.apple = Apple(normalized_x, normalized_y)
                     self.floors.add(Floor(normalized_x, normalized_y))
 
-        # Yeah this is not all sprites because the body is handled separately, work on this.
         self.all_sprites.add(
             self.floors,
             self.walls,
@@ -85,8 +101,15 @@ class Level:
             self.worm,
         )
 
-    # This function handles the collisions, movement and later growth of the worm.
     def update(self, current_time):  # pylint: disable=inconsistent-return-statements
+        """ This function handles the collisions, movement and later growth of the worm.
+
+        Args:
+            current_time (pygame.time.get_ticks()): How many clock ticks since the game started
+
+        Returns:
+            bool: If collision is detected with walls or body, inform GameLoop accordingly.
+        """
         if self.worm.should_move(current_time):
             x_coordinate = self.worm.rect.x
             y_coordinate = self.worm.rect.y
@@ -102,9 +125,11 @@ class Level:
         else:
             self._kill_last_sprite()
 
-    # Worm moves in the set direction after certain time has passed, the direction
-    # is stored in worm_direction.
     def _move_worm(self):
+        """ The worm moves in the set direction after certain time has passed.
+
+        The direction is read from the variable worm_direction (L, R, U, D).
+        """
         if self.worm_direction == "L":
             self.worm.rect.move_ip(-self.cell_size, 0)
         if self.worm_direction == "R":
@@ -114,20 +139,31 @@ class Level:
         if self.worm_direction == "D":
             self.worm.rect.move_ip(0, self.cell_size)
 
-    # This function spawns new body sprite after the head moves
     def _spawn_body_sprite(self, x_coordinate, y_coordinate):
+        """ Spawns a new body sprite every time the head moves.
+
+        Args:
+            x_coordinate (int): x-coordinate for the new Body-sprite
+            y_coordinate (int): y-coordinate for the new Body-sprite
+        """
         self.body.add(Body(self.body_life_time, x_coordinate, y_coordinate))
 
-    # This function effectively reduces the life of all body sprites by 1 thus
-    # "killing" the last one with updated lifetime of 0
     def _kill_last_sprite(self):
+        """ Effectively reduces the life of all body sprites by 1. t
+
+        Once the time to live hits 0, the sprite is killed.
+
+        If an apple is eaten, this function is skipped.
+        """
         for sprite in self.body:
             sprite.lifetime -= 1
             if sprite.lifetime == 0:
                 sprite.kill()
 
-    # The apple spawns randomly inside the arena on every map
     def _apple_eaten(self):
+        """ The Apple is spawned inside the arena, but not inside the worm.
+
+        """
         self.points += 10
         while True:
             self.apple.rect.update(

@@ -9,6 +9,7 @@ class Renderer:
         _level = A Level-object containing information and functions of the events in game
 
     """
+
     def __init__(self, display, level):
         """Constructs the Renderer-object
 
@@ -21,7 +22,7 @@ class Renderer:
 
     def render(self):
         """Updates the screen to reflect the currect game situation.
-        
+
         """
         pygame.display.set_caption(f"Points: {self._level.points}")
         self._level.all_sprites.draw(self._display)

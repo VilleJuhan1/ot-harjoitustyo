@@ -20,6 +20,7 @@ class GameLoop:
         _highscore = The object that handles the scoreboard
 
     """
+
     def __init__(self, level, renderer, event_queue, clock, cell_size):
         """Constructor of the GameLoop-object
 
@@ -39,7 +40,7 @@ class GameLoop:
 
     def start(self):
         """Handles the loop which runs one game session from start to finish.
-        
+
         The loop is broken on two conditions:
 
         1. Player presses ESCAPE-button which terminates the current game immediately.

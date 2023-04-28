@@ -4,6 +4,7 @@ import pygame
 class EventQueue:
     """Keeps track of the keyboard presses and the possible exit inside the game
     """
+
     def get(self):
         """Returns a button press or an exit
 

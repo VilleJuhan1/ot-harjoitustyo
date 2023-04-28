@@ -7,6 +7,7 @@ class Clock:
     Attributes:
         ._clock = A Clock-object from pygame.time module.
     """
+
     def __init__(self):
         """The constructor to create a new Clock-object.
 
