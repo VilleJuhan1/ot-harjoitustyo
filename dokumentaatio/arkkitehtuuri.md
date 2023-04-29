@@ -45,16 +45,16 @@ sequenceDiagram
     participant HighScore
     loop
     Index->>Menu: loop()
-    loop
+    activate Menu
     Menu-->>HighScore: show()
     HighScore-->>Menu: 
-    end
     Menu->>Index: 
+    deactivate Menu
     Index->>GameLoop: start()
-    loop
+    activate GameLoop
     GameLoop->>HighScore: write_file()
     HighScore->>GameLoop:
-    end 
-    GameLoop->>Index:  
+    GameLoop->>Index: 
+    deactivate GameLoop
     end
 ```
