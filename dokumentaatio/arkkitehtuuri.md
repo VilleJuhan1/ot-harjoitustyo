@@ -82,4 +82,6 @@ sequenceDiagram
     Index->>Clock: clock = Clock()
     Clock->>Index: Clock class object
     Index->>GameLoop: game_loop = GameLoop(level, renderer, event_queue, clock, CELL_SIZE)
+    GameLoop->>Index: GameLoop class object
+    Index->>GameLoop: game_loop.start()
 ```
