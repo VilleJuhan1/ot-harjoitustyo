@@ -20,3 +20,4 @@
 | 23.4. | 3h   | Muokkasin high score -valikkoa niin, että myös tiedon kirjoittaminen sinne onnistuu. Korjailin pylint-virheet. Tein uuden kaavion kuvaamaan pelisilmukkaa.
 | 28.4. | 2h   | Kirjoitin Docstringejä.
 | 29.4. | 2h   | Kirjoitin loput Docstringit tämänhetkiseen koodiin.
+|       | 2h   | Kirjoitin lisää testejä ja kirjoitin arkkitehtuurikuvausta osaksi dokumentaatiota.
