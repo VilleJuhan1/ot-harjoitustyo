@@ -1,6 +1,5 @@
 import os
 import pygame
-import sys
 from sprites.apple import Apple
 from menu.highscore import Highscore
 
