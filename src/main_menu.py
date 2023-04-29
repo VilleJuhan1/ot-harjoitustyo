@@ -31,7 +31,7 @@ class Menu:
         pygame.init()  # pylint: disable=no-member
         self.screen = screen
         self.screen_width = 650
-        self.screen_height = 800
+        self.screen_height = 850
         self.clock = pygame.time.Clock()
         self.font = pygame.font.Font("freesansbold.ttf", 50)
         self.sprites = pygame.sprite.Group()

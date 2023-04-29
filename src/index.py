@@ -34,8 +34,8 @@ def main():
 
     """
     maps = Maps()
-    level_map = maps.level_one
-    screen_proportions = (650, 800)
+    level_map = maps.level_two
+    screen_proportions = (650, 850)
     screen = pygame.display.set_mode(screen_proportions)
 
     while True:

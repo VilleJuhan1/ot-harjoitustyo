@@ -169,6 +169,7 @@ class Level:
             self.apple.rect.update(
                 (random.choice(self.x_positions), random.choice(self.y_positions)), (50, 50))
             if not pygame.sprite.spritecollide(self.apple, self.body, False):
-                break
+                if not pygame.sprite.spritecollide(self.apple, self.walls, False):                
+                    break
 
         self.body_life_time += 1
