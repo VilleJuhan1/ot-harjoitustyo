@@ -14,6 +14,7 @@ class Highscore:
         clock: pygame.time module Clock object to iterate for events and display updates.
         font: pygame.font module Font object for writing the scores.
     """
+
     def __init__(self, screen=test_screen, width=650, height=800):
         """ Constructor of the Highscore-object
 
@@ -37,10 +38,12 @@ class Highscore:
         """ Reads the highest scores from a text file.
 
         Args:
-            file_name (str, optional): The file that contains the highscores. Defaults to "src/menu/scores.txt".
+            file_name (str, optional): The file that contains the highscores. 
+                                       Defaults to "src/menu/scores.txt".
 
         Returns:
-            list: A list of tuples with the highscores, one tuple contains name and score, ie. ("Matti",500).
+            list: A list of tuples with the highscores.
+                  One tuple contains name and score, ie. ("Matti",500).
         """
         highscore_list = []
         with open(file_name, "r", encoding="utf-8") as file:
@@ -53,7 +56,9 @@ class Highscore:
         return highscore_list
 
     def write_file(self, file_name: str, player="Tester", score=350):
-        """ Saves the scores back to the file containing them. Drops the worst score when writing file.
+        """ Saves the scores back to the file containing them. 
+        
+        Drops the worst score when writing the file.
 
         Args:
             file_name (str): The path where the score file is located
@@ -61,7 +66,7 @@ class Highscore:
             score (int, optional): The score achieved in the current game. Defaults to 350.
 
         Default values are used only in testing.
-            
+
         """
         self.scores.append((player, score))
         self.scores.sort(key=lambda i: i[1], reverse=True)

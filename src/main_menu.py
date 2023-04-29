@@ -5,7 +5,26 @@ from menu.highscore import Highscore
 
 
 class Menu:
+    """ The class that handles the code required for running the main menu in game.
+
+    Attributes:
+        screen: The display.
+        screen_width: The display width in pixels.
+        screen_height: The display height in pixels.
+        clock: pygame.time.Clock()-class object to handle ticks.
+        font: pygame.font.Font()-class object to be used in printing text.
+        sprites: pygame.sprite.Group()-class object to handle the sprites in menu.
+        choice: The variable that keeps track of the red cursor (Apple) position.
+        highscore: Highscore()-class object that is used in menu to read and print highscores.
+
+    """
+
     def __init__(self, screen):
+        """ The constructor
+
+        Args:
+            screen (pygame.display): The window where the information is handled.
+        """
         os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (  # pylint: disable=consider-using-f-string
             700, 400)
         pygame.init()  # pylint: disable=no-member
@@ -20,6 +39,9 @@ class Menu:
         self.highscore = Highscore()
 
     def init_sprites(self):
+        """ Initializes the sprites on screen.
+
+        """
         self.apple = Apple(self.screen_width // 6,
                            (self.screen_height - 200) // 2 - 28)
         self.sprites.add(self.apple)
@@ -40,6 +62,16 @@ class Menu:
             self.screen_width // 2, (self.screen_height + 200) // 2)
 
     def loop(self):
+        """ The menu loop when the user is in the main menu.
+
+        Keeps track of up and down arrow key presses to change the position of the cursor.
+
+        The loop breaks when the user chooses "New game" thus returning back to the loop
+        in index.py.
+
+        Attributes:
+            chosen: User chooses a menu item by pressing enter. The variable changes accordingly.
+        """
         chosen = None
         while chosen != "game":
             self.render()
@@ -51,6 +83,11 @@ class Menu:
                 chosen = None
 
     def get_events(self):  # pylint: disable=inconsistent-return-statements
+        """ Checks for certain button presses inside the menu.
+
+        Returns:
+            str: Returns the variable that triggers an object in the menu.
+        """
         for event in pygame.event.get():  # pylint: disable=too-many-nested-blocks
             if event.type == pygame.KEYDOWN:  # pylint: disable=no-member
                 if event.key == pygame.K_DOWN:  # pylint: disable=no-member
@@ -70,6 +107,9 @@ class Menu:
                 exit()  # pylint: disable=consider-using-sys-exit
 
     def render(self):
+        """ Renders the initial screen and updates the position of the cursor in menu.
+
+        """
         pygame.display.set_caption("Main menu")
         self.screen.fill((153, 193, 241))
         self.screen.blit(self.new_game, self.new_game_rect)
