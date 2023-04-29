@@ -14,4 +14,8 @@ Käynnistä sovellus komennolla:
 
 > poetry run invoke start
 
+### Päävalikko
 
+Peli käynnistyy päävalikkoon. Valitse haluamasi toiminto nuolinäppäimillä ja enterillä.
+
+![image of the main menu](
