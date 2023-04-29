@@ -22,3 +22,4 @@
 | 29.4. | 2h   | Kirjoitin loput Docstringit tämänhetkiseen koodiin.
 |       | 2h   | Kirjoitin lisää testejä ja kirjoitin tarkempaa arkkitehtuurikuvausta osaksi dokumentaatiota.
 |       | 1h   | Kirjoitin käyttöohjeen ensimmäisen version.
+|       | 1h   | Koodasin .csv-lukijan niin, että kartan voi halutessaan ladata Google Drivesta. Käyttöliittymä vaiheessa.

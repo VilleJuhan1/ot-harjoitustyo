@@ -40,6 +40,7 @@ class Maps:
 
         self.level_two = self.read_csv_from_url()
 
+    # This function needs some error detection
     def read_csv_from_url(self):
         url = "https://drive.google.com/file/d/1ZsHfubrB7LQwKMvhbGr_UNvfk_GHJcix/view?usp=share_link"
         file_id = url.split('/')[-2]

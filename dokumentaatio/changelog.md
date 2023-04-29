@@ -1,3 +1,7 @@
+## Viikko 6
+
+- Peli lataa kartan .csv-tiedostona Google Drivesta
+- Poetry-komento oman linkin vaihtamiseksi karttatiedostoa varten tulossa myöhemmin
 
 ## Viikko 5
 
