@@ -1,5 +1,8 @@
 ### Sovellusarkkitehtuuri
 
+Sovellus rakentuu useista eri tasoista, jotka on kuvattu alla olevassa luokkadiagrammissa. Pääosa toiminnoista tapahtuu Menu- ja GameLoop-luokkien sisällä.
+Eri luokkien suhteita ja toimintoja on kuvattu tarkemmin myöhemmin tässä dokumentissa.
+
 ```mermaid
 classDiagram
     GameLoop <|.. Level
@@ -65,11 +68,11 @@ kuitenkin olla jatkossa järkevää siirtää tämä toiminnallisuus suoraan osa
 ```mermaid
 sequenceDiagram
     participant Index
-    participant GameLoop
     participant Level
     participant EventQueue
     participant Renderer
     participant Clock
+    participant GameLoop
     Index->>Level: level = Level(level_map, CELL_SIZE)
     Level->>Index: Level class object
     Index->>EventQueue: event_queue = EventQueue()
