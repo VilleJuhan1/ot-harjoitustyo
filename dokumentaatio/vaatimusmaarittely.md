@@ -13,10 +13,9 @@ Pelissä ei ole erillisiä käyttäjärooleja.
 
 ### Käyttöliittymä
 
-Peli avautuu aloitusvalikkoon, josta löytyvät ainakin seuraavat toiminnallisuudet:
+Peli avautuu aloitusvalikkoon, josta löytyvät seuraavat toiminnallisuudet:
 
 - Aloita uusi peli
-- Vaihda vaikeusastetta (1-9)
 - Katso ennätystulokset
 - Lopeta peli
 
@@ -33,10 +32,12 @@ kenttiä. Matoa ohjataan nuolinäppäimillä.
 ### Jatkokehittelyjä mahdollisuuksien mukaan
 
 - [x] Graafinen aloitusvalikko
+- [ ] Virheiden huomiointi koodissa, esim. ennätystuloslistan lukemisessa
+- [ ] Uuden kirjaston käyttäminen koodissa
+- [ ] Tiedon tallentaminen ja lukeminen verkosta jossain muodossa, esim. globaali high score -lista
 - [ ] Vaikeusasteen vaihtaminen
 - [ ] Madon ulkoasun vaihtaminen
 - [ ] Kentän vaihtaminen
-- [ ] Globaali high score -lista
 
 ### Toissijaisia, mutta kivoja tavoitteita
 
