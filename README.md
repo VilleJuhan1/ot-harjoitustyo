@@ -23,6 +23,7 @@ tapahtuu millä tahansa näppäimellä.
 * [Työaikakirjanpito](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 * [Changelog](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 * [Arkkitehtuuri](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+* [Käyttöohje](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 ### Julkaistut versiot
 
