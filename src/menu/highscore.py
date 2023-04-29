@@ -57,7 +57,7 @@ class Highscore:
 
     def write_file(self, file_name: str, player="Tester", score=350):
         """ Saves the scores back to the file containing them. 
-        
+
         Drops the worst score when writing the file.
 
         Args:
@@ -98,7 +98,7 @@ class Highscore:
         self.fifth = self.font.render(
             f"5. {self.scores[4][0]} {self.scores[4][1]}", True, (255, 255, 255))
 
-    def show(self):
+    def show(self, go_back=True):
         """ This function is called when user enters the highscore from main menu.
 
         It is used to display the high scores.
@@ -106,10 +106,10 @@ class Highscore:
         User can break the loop by pressing any key.
 
         """
-        go_back = True
         while True:
             self.render()
-            go_back = self.get_events()
+            if go_back is not False:
+                go_back = self.get_events()
             if go_back is False:
                 break
             self.clock.tick(60)

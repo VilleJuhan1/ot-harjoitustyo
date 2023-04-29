@@ -63,7 +63,8 @@ class TestLevel(unittest.TestCase):
 
     def test_should_move_works(self):
         self.level.update(1000)
-        self.assert_coordinates_equal(self.level.worm, 1 * CELL_SIZE, 2 * CELL_SIZE)
+        self.assert_coordinates_equal(
+            self.level.worm, 1 * CELL_SIZE, 2 * CELL_SIZE)
 
     def test_body_spawns(self):
         self.level.body_life_time = 1
@@ -78,5 +79,3 @@ class TestLevel(unittest.TestCase):
         self.level._spawn_body_sprite(2 * CELL_SIZE, 2 * CELL_SIZE)
         self.level._kill_last_sprite()
         self.assertEqual(len(self.level.body), 0)
-
-    

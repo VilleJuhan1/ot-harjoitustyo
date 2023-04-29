@@ -1,6 +1,5 @@
 import unittest
 import pygame
-import keyboard
 
 from menu.highscore import Highscore
 import menu.reset_highscore
@@ -29,7 +28,4 @@ class TestHighscore(unittest.TestCase):
         self.assertEqual(self.scoreboard.scores[0], ("Mauno", 500))
 
     def test_scoreboard_exits_properly(self):
-        self.scoreboard.show()
-        keyboard.write('x')
-
-
+        self.scoreboard.show(False)

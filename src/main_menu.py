@@ -1,5 +1,6 @@
 import os
 import pygame
+import sys
 from sprites.apple import Apple
 from menu.highscore import Highscore
 
@@ -71,6 +72,9 @@ class Menu:
 
         Attributes:
             chosen: User chooses a menu item by pressing enter. The variable changes accordingly.
+
+        Args:
+            is_test (bool): Can be used in testing. 
         """
         chosen = None
         while chosen != "game":
