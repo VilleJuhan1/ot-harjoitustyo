@@ -16,6 +16,7 @@ classDiagram
     Level <|.. Wall
     Level <|.. Worm
     Level <|.. Maps
+    Maps <|.. Devcommands
     Menu .. GameLoop
     Menu .. HighScore
 ```

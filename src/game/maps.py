@@ -94,6 +94,11 @@ class Maps:
         return self.level_one
 
     def return_map(self):
+        """ Returns the map table
+
+        Returns:
+            list: A 2-dimensional table used for creating the game level.
+        """
         if self.devcommands.commands["mode"] == "online":
             return self.level_two
         return self.level_one

@@ -36,3 +36,15 @@ Uusi peli alkaa välittömästi valittaessa päävalikosta "New Game". Liikuta m
 loppuu, jos törmäät omaan häntääsi (vaaleanvihreä) tai seinään (harmaa).
 
 ![image of the game](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/kuvatiedostot/gameplay.png)
+
+## Kehittäjän työkalut
+
+Pelissä on tiettyjä ominaisuuksia, jotka ovat käytössä vain eräänlaisessa kehittäjäversiossa. Pääset kehittäjätyökaluihin komennolla:
+
+> Poetry run invoke devcommands
+
+Työkalut avautuvat terminaalissa tiedostosta src/game/devcommands.py. Tällä hetkellä käytössä ovat:
+
+1. mode: Vaihtamalla tilaksi 'online', peli lataa kartan Google Drivessa olevasta .csv-tiedostosta.
+2. url: Vaihtamalla osoitteen, voit ladata uusia .csv-tiedostoja Google Drivesta ja kokeilla peliä niillä. [Esimerkkitiedosto](https://drive.google.com/file/d/1ZsHfubrB7LQwKMvhbGr_UNvfk_GHJcix/view?usp=share_link).
+3. reset: Palauttaa oletusasetukset eli nollaa moden ja urlin.

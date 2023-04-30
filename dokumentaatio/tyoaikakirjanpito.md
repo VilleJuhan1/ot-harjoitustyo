@@ -24,3 +24,4 @@
 |       | 1h   | Kirjoitin käyttöohjeen ensimmäisen version.
 |       | 1h   | Koodasin .csv-lukijan niin, että kartan voi halutessaan ladata Google Drivesta. Käyttöliittymä vaiheessa.
 | 30.4. | 3h   | Koodasin Devcommands()-luokan, jonka avulla pystyy kokeilemaan pelissä uusia asioita rikkomatta perustoiminnallisuuksia.
+|       | 1h   | Kirjoitin Docstringit lopuille luokille, päivitin dokumentaation ja tein uuden julkaisun.
