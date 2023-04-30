@@ -30,6 +30,7 @@ tapahtuu millä tahansa näppäimellä.
 
 ### Julkaistut versiot
 
+[Viikko 6](https://github.com/VilleJuhan1/ot-harjoitustyo/releases/tag/viikko6)
 [Viikko 5](https://github.com/VilleJuhan1/ot-harjoitustyo/releases/tag/viikko5)
 
 ### Tarvittavat komennot
