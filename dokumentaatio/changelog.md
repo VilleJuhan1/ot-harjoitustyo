@@ -1,5 +1,12 @@
 ## Viikko 6
 
+**30.4.2023**
+
+- .csv-tiedoston lataaminen on muutettu ehdolliseksi käyttäen Devcommands()-luokkaa.
+- Devcommands()-luokan avulla pelissä on mahdollista kokeilla uusia ominaisuuksia ilman, että perustoiminnallisuudet rikkoutuvat.
+
+**29.4.2023**
+
 - Peli lataa kartan .csv-tiedostona Google Drivesta
 - Poetry-komento oman linkin vaihtamiseksi karttatiedostoa varten tulossa myöhemmin
 

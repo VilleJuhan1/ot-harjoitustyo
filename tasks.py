@@ -27,3 +27,7 @@ def reset_score(ctx):
 @task
 def autopep(ctx):
     ctx.run("autopep8 --in-place --recursive src")
+
+@task
+def devcommands(ctx):
+    ctx.run("python3 src/game/devcommands.py")

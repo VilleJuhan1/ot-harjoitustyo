@@ -32,14 +32,14 @@ kenttiä. Matoa ohjataan nuolinäppäimillä.
 ### Jatkokehittelyjä mahdollisuuksien mukaan
 
 - [x] Graafinen aloitusvalikko
-- [ ] Virheiden huomiointi koodissa, esim. ennätystuloslistan lukemisessa
-- [ ] Uuden kirjaston käyttäminen koodissa
-- [ ] Tiedon tallentaminen ja lukeminen verkosta jossain muodossa, esim. globaali high score -lista
+- [x] Virheiden huomiointi koodissa, esim. karttatiedostoa ladatessa
+- [x] Uuden kirjaston käyttäminen koodissa
+- [x] Tiedon tallentaminen ja lukeminen verkosta jossain muodossa (Tällä hetkellä vain karttatiedoston lukeminen)
 - [ ] Vaikeusasteen vaihtaminen
 - [ ] Madon ulkoasun vaihtaminen
-- [ ] Kentän vaihtaminen
+- [x] Kentän vaihtaminen (Google Drive -linkin kautta)
 
 ### Toissijaisia, mutta kivoja tavoitteita
 
 - [ ] Kaksinpeli
-- [ ] Kenttäeditori
+- [x] Kenttäeditori (Luomalla .csv-tiedosto ja tallentamalla se Google Driveen)

@@ -1,8 +1,9 @@
-# The map objects need to adhere to 650 x 800 pixel display size
-# Thus the maximum width is 13 and height 16 for now
+# The map objects need to adhere to 650 x 850 pixel display size.
+# Thus the maximum width is 13 and height 17 for now.
 
 import csv
 import urllib.request
+from game.devcommands import Devcommands
 
 
 class Maps:
@@ -40,10 +41,14 @@ class Maps:
                           [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
                           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]
 
-        self.level_two = self.read_csv_from_url()
+        self.devcommands = Devcommands()
 
-    def read_csv_from_url(self): #pylint: disable=too-many-statements
-        """ Reads map parameters from a .csv file in Google drive URL.
+        if self.devcommands.commands["mode"] == "online":
+            self.level_two = self.read_csv_from_url(
+                self.devcommands.commands["url"])
+
+    def read_csv_from_url(self, url):  # pylint: disable=too-many-statements
+        """ Reads map parameters from a .csv file in a Google drive URL.
 
         Checks if the parameters match the requirements, if not defaults to self.level_one
 
@@ -53,20 +58,20 @@ class Maps:
         Returns:
             list: A table containing required information for building a map.
         """
-        url = "https://drive.google.com/file/d/1ZsHfubrB7LQwKMvhbGr_UNvfk_GHJcix/view?usp=share_link" # pylint: disable=line-too-long
         try:
             file_id = url.split('/')[-2]
             download_url = 'https://drive.google.com/uc?export=download&id=' + file_id
-            response = urllib.request.urlopen(download_url) #pylint: disable=consider-using-with
+            response = urllib.request.urlopen( # pylint: disable=consider-using-with
+                download_url)
             lines = [l.decode('utf-8') for l in response.readlines()]
             imported_file = csv.reader(lines)
-        except Exception: #pylint: disable=broad-exception-caught
+        except Exception:  # pylint: disable=broad-exception-caught
             print("The level couldn't be loaded for some reason.")
             return self.level_one
 
         level_map = []
 
-        for row in imported_file: #pylint: disable=too-many-nested-blocks
+        for row in imported_file:  # pylint: disable=too-many-nested-blocks
             temp_row = []
             for value in row:
                 try:
@@ -75,7 +80,7 @@ class Maps:
                         print("Only numbers 0, 1, 2 and 4 allowed in maps.")
                         return self.level_one
                 except Exception:
-                    raise ValueError( #pylint: disable=raise-missing-from
+                    raise ValueError(  # pylint: disable=raise-missing-from
                         "Couln't convert the value to an integer.")
             if len(row) == len(self.level_one[0]):
                 level_map.append(temp_row)
@@ -89,7 +94,9 @@ class Maps:
         return self.level_one
 
     def return_map(self):
-        pass
+        if self.devcommands.commands["mode"] == "online":
+            return self.level_two
+        return self.level_one
 
 
 if __name__ == "__main__":
