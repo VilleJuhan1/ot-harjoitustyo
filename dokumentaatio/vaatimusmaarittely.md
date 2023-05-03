@@ -13,33 +13,32 @@ Pelissä ei ole erillisiä käyttäjärooleja.
 
 ### Käyttöliittymä
 
-Peli avautuu aloitusvalikkoon, josta löytyvät seuraavat toiminnallisuudet:
+Peli avautuu graafiseen aloitusvalikkoon, josta löytyvät seuraavat toiminnallisuudet:
 
 - Aloita uusi peli
 - Katso ennätystulokset
 - Lopeta peli
 
-Pelikenttä koodataan graafisena käyttäen Pygamea. Taustalla koodissa kaksiulotteinen taulukko. Mahdollisuus rakentaa näin myös uusia
-kenttiä. Matoa ohjataan nuolinäppäimillä.
+Valikossa liikutaan nuolinäppäimillä sekä ENTER- ja ESC-painikkeilla. Myös matoa ohjataan nuolinäppäimillä. Mikäli pelaaja saavuttaa riittävän
+korkean tuloksen pelissä, kirjataan pelaajan haluama alias kirjoittamalla se. Kirjoittaminen ruudulle toimii, kuten olettaa saattaa.
 
-### Perusversion toiminnallisuudet
+### Tekniset ominaisuudet
 
-- [x] Tekstipohjainen käyttöliittymä
+Peli renderöidään käyttäen Pygame-kirjastoa. Pelihahmot, karttaelementit ja tekstit ovat Pygamen sprite-olioita. Pelikenttä ladataan kaksiulotteisesta taulukosta.
+
+### Nykyisen julkaisun toiminnallisuudet
+
+- [x] Graafinen käyttöliittymä
 - [x] Paikalliseen tiedostoon tallentuvat ennätystulokset
-- [x] Yksi pelattava kenttä, joka toimii yhdellä vaikeusasteella, kuten olettaa voi (liikkuminen, törmääminen, kasvaminen, hedelmien ilmestyminen ja pistelasku)
+- [x] Pelattava kenttä, joka toimii, kuten olettaa voi (liikkuminen, törmääminen, kasvaminen, hedelmien ilmestyminen ja pistelasku)
 - [x] Perustoiminnallisuuksia testaavat automaattitestit
-
-### Jatkokehittelyjä mahdollisuuksien mukaan
-
-- [x] Graafinen aloitusvalikko
+- [x] Karttatiedoston lukeminen Google Drivesta käyttäen kehittäjätyökaluja
+- [x] Omien kenttien tekeminen luomalla parametrien mukainen .csv-tiedosto ja tallentamalla se Google Driveen
 - [x] Virheiden huomiointi koodissa, esim. karttatiedostoa ladatessa
-- [x] Uuden kirjaston käyttäminen koodissa
-- [x] Tiedon tallentaminen ja lukeminen verkosta jossain muodossa (Tällä hetkellä vain karttatiedoston lukeminen)
+
+### Toiminnallisuudet, jotka jäivät odottamaan myöhempiä versioita
+
 - [ ] Vaikeusasteen vaihtaminen
 - [ ] Madon ulkoasun vaihtaminen
-- [x] Kentän vaihtaminen (Google Drive -linkin kautta)
-
-### Toissijaisia, mutta kivoja tavoitteita
-
 - [ ] Kaksinpeli
-- [x] Kenttäeditori (Luomalla .csv-tiedosto ja tallentamalla se Google Driveen)
+- [ ] Uuden, ennestään tuntemattoman kirjaston käyttäminen koodissa

@@ -30,6 +30,10 @@ Voit nollata ennätystulokset oletusasetuksille komennolla:
 
 > poetry run invoke reset-score
 
+Mikäli saat riittävästi pisteitä päästäksesi ennätystulosten listalle, peli "jäätyy" kuoleman koittaessa ja pääset kirjoittamaan ruutuun nimesi.
+
+![image of the input name screen]()
+
 ### Pelaaminen
 
 Uusi peli alkaa välittömästi valittaessa päävalikosta "New Game". Liikuta matoa nuolinäppäimillä. Keräämällä omenoita saat pisteitä. Peli
