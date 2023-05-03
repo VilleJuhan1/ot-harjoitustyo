@@ -1,3 +1,4 @@
+import sys
 import os
 import pygame
 from sprites.apple import Apple
@@ -25,8 +26,7 @@ class Menu:
         Args:
             screen (pygame.display): The window where the information is handled.
         """
-        os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (  # pylint: disable=consider-using-f-string
-            700, 400)
+        os.environ['SDL_VIDEO_WINDOW_POS'] = f"{700},{400}"
         pygame.init()  # pylint: disable=no-member
         self.screen = screen
         self.screen_width = 650
@@ -85,7 +85,7 @@ class Menu:
                 self.highscore.show()
                 chosen = None
 
-    def get_events(self):  # pylint: disable=inconsistent-return-statements
+    def get_events(self):
         """ Checks for certain button presses inside the menu.
 
         Returns:
@@ -105,9 +105,11 @@ class Menu:
                     if self.choice == 2:
                         return "score"
                     if self.choice == 3:
-                        exit()  # pylint: disable=consider-using-sys-exit
+                        sys.exit()
             if event.type == pygame.QUIT:  # pylint: disable=no-member
-                exit()  # pylint: disable=consider-using-sys-exit
+                sys.exit()
+
+        return None
 
     def render(self):
         """ Renders the initial screen and updates the position of the cursor in menu.

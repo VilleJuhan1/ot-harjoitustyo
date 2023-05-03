@@ -1,3 +1,4 @@
+import sys
 import pygame
 
 
@@ -157,7 +158,7 @@ class Highscore:
                          self.fifth_score.get_width(), 3 * relative_y))
         pygame.display.update()
 
-    def get_events(self):  # pylint: disable=inconsistent-return-statements
+    def get_events(self):
         """ While on highscore menu, user can break the loop by pressing any key.
 
         The KEYDOWN-event is observed in this function.
@@ -169,7 +170,8 @@ class Highscore:
             if event.type == pygame.KEYDOWN:  # pylint: disable=no-member
                 return False  # pylint: disable=inconsistent-return-statements
             if event.type == pygame.QUIT:  # pylint: disable=no-member
-                exit()  # pylint: disable=consider-using-sys-exit
+                sys.exit()
+        return True
 
 
 if __name__ == "__main__":

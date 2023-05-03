@@ -40,12 +40,8 @@ def main():
 
     while True:
 
-        # Quitting pygame-object and closing the game can be done in menu
         menu = Menu(screen)
         menu.loop()
-
-        # Game loop needs a reset before every game because the parameters differ
-        # from menu apart from screen size and title
         level = Level(level_map, CELL_SIZE)
         event_queue = EventQueue()
         renderer = Renderer(screen, level)

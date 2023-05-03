@@ -31,7 +31,7 @@ class Devcommands:
             dict: Contains information on game mode and map url.
         """
         commands_dict = {}
-        with open(self.file, "r") as file:  # pylint: disable=unspecified-encoding
+        with open(self.file, "r", encoding="utf-8") as file:
             file = file.read().split("\n")
             for item in file:
                 if item == "":
@@ -105,7 +105,7 @@ class Devcommands:
         """ Writes the changes to a file.
 
         """
-        with open(self.file, "w") as file:  # pylint: disable=unspecified-encoding
+        with open(self.file, "w", encoding="utf-8") as file:
             for key, value in self.commands.items():
                 file.write(f"{key};{value}\n")
 
@@ -115,7 +115,7 @@ class Devcommands:
         """
         self.commands["mode"] = "offline"
         self.commands["url"] = "https://drive.google.com/file/d/1ZsHfubrB7LQwKMvhbGr_UNvfk_GHJcix/view?usp=share_link"  # pylint: disable=line-too-long
-        with open(self.file, "w") as file:  # pylint: disable=unspecified-encoding
+        with open(self.file, "w", encoding="utf-8") as file:
             for key, value in self.commands.items():
                 file.write(f"{key};{value}\n")
         print("The settings are now reset to default values.")

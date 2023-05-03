@@ -1,7 +1,6 @@
 import pygame
 from menu.highscore import Highscore
 from menu.highscore_input import HighscoreInput
-from game.devcommands import Devcommands
 
 # The way GameLoop-class initializes and forms around other files in the
 # program was originally created by Kalle Ilves in Sokoban-game project:
@@ -60,15 +59,15 @@ class GameLoop:
             if collision:
                 if self._level.points > self._highscore.lowest():
                     self._highscore.write_file(
-                        "src/menu/scores.txt", self._user_input.input_player_name(), self._level.points)
+                        "src/menu/scores.txt",
+                        self._user_input.input_player_name(),
+                        self._level.points)
                 break
-
-            # Replace "Player" with function call to Highscore_input()
 
             self._render()
             self._clock.tick(5)
 
-    def _handle_events(self):  # pylint: disable=inconsistent-return-statements
+    def _handle_events(self):
         """Keeps track of the button presses.
 
         Changes the direction of the worm when arrow keys are pressed.
@@ -90,6 +89,8 @@ class GameLoop:
                     return False
             elif event.type == pygame.QUIT:  # pylint: disable=no-member
                 return False
+
+        return True
 
     def _render(self):
         """Renders the screen to reflect the updates in the game.

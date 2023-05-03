@@ -1,6 +1,6 @@
 import pygame
 
-pygame.init()
+pygame.init()  # pylint: disable=no-member
 
 
 class HighscoreInput:
@@ -14,12 +14,13 @@ class HighscoreInput:
         renderer: Renderer-class object that is inherited from GameLoop.
 
     """
+
     def __init__(self, renderer):
         """ The constructor
 
         Args:
-            renderer (Renderer): Inherited Renderer-class object so that the sprites are displayed in the same display
-            as others.
+            renderer (Renderer): Inherited Renderer-class object so that the sprites are
+            displayed in the same display as others.
         """
         self.font = pygame.font.Font("freesansbold.ttf", 50)
         self.clock = pygame.time.Clock()
@@ -35,7 +36,7 @@ class HighscoreInput:
             str: The name player wants displayed on scoreboard.
         """
         loop = True
-        while loop == True:
+        while loop is True:
 
             loop = self.events()
             input_rect = self.font.render(
@@ -53,18 +54,16 @@ class HighscoreInput:
         """
         for event in pygame.event.get():
 
-            if event.type == pygame.QUIT:
-                pygame.quit()
+            if event.type == pygame.QUIT:  # pylint: disable=no-member
+                pygame.quit()  # pylint: disable=no-member
 
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN:  # pylint: disable=no-member
 
-                if event.key == pygame.K_RETURN:
+                if event.key == pygame.K_RETURN:  # pylint: disable=no-member
                     return False
-                elif event.key == pygame.K_BACKSPACE:
+                if event.key == pygame.K_BACKSPACE:  # pylint: disable=no-member
                     self.user_input = self.user_input[:-1]
-                else:
-                    if len(self.user_input) <= 8:
-                        self.user_input += event.unicode
+                if len(self.user_input) <= 8:
+                    self.user_input += event.unicode
 
         return True
-

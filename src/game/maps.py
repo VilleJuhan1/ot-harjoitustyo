@@ -81,7 +81,7 @@ class Maps:
                         return self.level_one
                 except Exception:
                     raise ValueError(  # pylint: disable=raise-missing-from
-                        "Couln't convert the value to an integer.")
+                        "Couldn't convert the value to an integer.")
             if len(row) == len(self.level_one[0]):
                 level_map.append(temp_row)
             else:

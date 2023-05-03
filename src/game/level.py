@@ -13,7 +13,6 @@ from sprites.apple import Apple
 
 
 class Level:
-    # Too many instance attributes here, work on it.
     """Handles the sprites, events and possible collisions in one game session.
 
     Attributes:
@@ -62,8 +61,8 @@ class Level:
             to dimension in question
         """
         temp_list = []
-        for n in range(1, length-1):  # pylint: disable=invalid-name
-            temp_list.append(n * self.cell_size)
+        for running_number in range(1, length-1):
+            temp_list.append(running_number * self.cell_size)
         return temp_list
 
     def _initialize_sprites(self, level_map):
@@ -77,7 +76,7 @@ class Level:
         """
         # pylint: disable=consider-using-enumerate
 
-        for number_of_y in range(len(level_map)):  # pylint: disable=inconsistent-return-statements
+        for number_of_y in range(len(level_map)):
             for number_of_x in range(len(level_map[0])):
                 cell = level_map[number_of_y][number_of_x]
                 normalized_x = number_of_x * self.cell_size
@@ -101,7 +100,7 @@ class Level:
             self.worm,
         )
 
-    def update(self, current_time):  # pylint: disable=inconsistent-return-statements
+    def update(self, current_time):
         """ This function handles the collisions, movement and later growth of the worm.
 
         Args:
@@ -124,6 +123,8 @@ class Level:
             self._apple_eaten()
         else:
             self._kill_last_sprite()
+
+        return False
 
     def _move_worm(self):
         """ The worm moves in the set direction after certain time has passed.
