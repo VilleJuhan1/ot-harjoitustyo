@@ -1,6 +1,7 @@
 import pygame
 from menu.highscore import Highscore
 from menu.highscore_input import HighscoreInput
+from game.devcommands import Devcommands
 
 # The way GameLoop-class initializes and forms around other files in the
 # program was originally created by Kalle Ilves in Sokoban-game project:
