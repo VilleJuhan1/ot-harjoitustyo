@@ -1,3 +1,9 @@
+## Viikko 7
+
+**3.5.2023**
+
+- Parhaat pelaajat pystyvät kirjoittamaan nimensä ennätystulosten listalle!
+
 ## Viikko 6
 
 **30.4.2023**

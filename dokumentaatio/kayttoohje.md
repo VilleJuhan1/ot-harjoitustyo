@@ -32,7 +32,7 @@ Voit nollata ennätystulokset oletusasetuksille komennolla:
 
 Mikäli saat riittävästi pisteitä päästäksesi ennätystulosten listalle, peli "jäätyy" kuoleman koittaessa ja pääset kirjoittamaan ruutuun nimesi.
 
-![image of the input name screen]()
+![image of the input name screen](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/kuvatiedostot/input_name.png)
 
 ### Pelaaminen
 
