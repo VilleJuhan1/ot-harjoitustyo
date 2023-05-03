@@ -28,3 +28,13 @@ class Renderer:
         self._level.all_sprites.draw(self._display)
         self._level.body.draw(self._display)
         pygame.display.update()
+
+    def render_user_input(self, input):
+        pygame.display.set_caption("Game over!")
+        self._level.all_sprites.draw(self._display)
+        self._level.body.draw(self._display)
+        pos = input[0].get_rect(center=(650/2, 300))
+        self._display.blit(input[0], pos)
+        pos = input[1].get_rect(center=(650/2, 400))
+        self._display.blit(input[1], pos)
+        pygame.display.update()

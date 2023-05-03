@@ -61,7 +61,7 @@ class Maps:
         try:
             file_id = url.split('/')[-2]
             download_url = 'https://drive.google.com/uc?export=download&id=' + file_id
-            response = urllib.request.urlopen( # pylint: disable=consider-using-with
+            response = urllib.request.urlopen(  # pylint: disable=consider-using-with
                 download_url)
             lines = [l.decode('utf-8') for l in response.readlines()]
             imported_file = csv.reader(lines)

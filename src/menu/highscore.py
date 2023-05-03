@@ -55,6 +55,9 @@ class Highscore:
 
         return highscore_list
 
+    def lowest(self):
+        return self.scores[-1][1]
+
     def write_file(self, file_name: str, player="Tester", score=350):
         """ Saves the scores back to the file containing them. 
 
@@ -87,16 +90,26 @@ class Highscore:
         self.header_rect.center = (
             screen_width // 2, (screen_height - 600) // 2)
 
-        self.first = self.font.render(
-            f"1. {self.scores[0][0]} {self.scores[0][1]}", True, (255, 255, 255))
-        self.second = self.font.render(
-            f"2. {self.scores[1][0]} {self.scores[1][1]}", True, (255, 255, 255))
-        self.third = self.font.render(
-            f"3. {self.scores[2][0]} {self.scores[2][1]}", True, (255, 255, 255))
-        self.fourth = self.font.render(
-            f"4. {self.scores[3][0]} {self.scores[3][1]}", True, (255, 255, 255))
-        self.fifth = self.font.render(
-            f"5. {self.scores[4][0]} {self.scores[4][1]}", True, (255, 255, 255))
+        self.first_player = self.font.render(
+            f"1. {self.scores[0][0]}", True, (255, 255, 255))
+        self.first_score = self.font.render(
+            f"{self.scores[0][1]}", True, (255, 255, 255))
+        self.second_player = self.font.render(
+            f"2. {self.scores[1][0]}", True, (255, 255, 255))
+        self.second_score = self.font.render(
+            f"{self.scores[1][1]}", True, (255, 255, 255))
+        self.third_player = self.font.render(
+            f"3. {self.scores[2][0]}", True, (255, 255, 255))
+        self.third_score = self.font.render(
+            f"{self.scores[2][1]}", True, (255, 255, 255))
+        self.fourth_player = self.font.render(
+            f"4. {self.scores[3][0]}", True, (255, 255, 255))
+        self.fourth_score = self.font.render(
+            f"{self.scores[3][1]}", True, (255, 255, 255))
+        self.fifth_player = self.font.render(
+            f"5. {self.scores[4][0]}", True, (255, 255, 255))
+        self.fifth_score = self.font.render(
+            f"{self.scores[4][1]}", True, (255, 255, 255))
 
     def show(self, go_back=True):
         """ This function is called when user enters the highscore from main menu.
@@ -117,18 +130,31 @@ class Highscore:
     def render(self):
         """ Renders the text sprites on screen.
 
+        Because the scoreboard is in table form, both player name and score are rendered
+        separately.
+
         """
-        relative_x = self.screen_proportions[0] // 4
+        relative_x = self.screen_proportions[0] // 6
         relative_y = self.screen_proportions[1] // 4
 
         pygame.display.set_caption("Scoreboard")
         self.screen.fill((153, 193, 241))
         self.screen.blit(self.header, self.header_rect)
-        self.screen.blit(self.first, (relative_x, relative_y))
-        self.screen.blit(self.second, (relative_x, 1.5 * relative_y))
-        self.screen.blit(self.third, (relative_x, 2 * relative_y))
-        self.screen.blit(self.fourth, (relative_x, 2.5 * relative_y))
-        self.screen.blit(self.fifth, (relative_x, 3 * relative_y))
+        self.screen.blit(self.first_player, (relative_x, relative_y))
+        self.screen.blit(self.second_player, (relative_x, 1.5 * relative_y))
+        self.screen.blit(self.third_player, (relative_x, 2 * relative_y))
+        self.screen.blit(self.fourth_player, (relative_x, 2.5 * relative_y))
+        self.screen.blit(self.fifth_player, (relative_x, 3 * relative_y))
+        self.screen.blit(self.first_score, (relative_x * 5 -
+                         self.first_score.get_width(), relative_y))
+        self.screen.blit(self.second_score, (relative_x * 5 -
+                         self.second_score.get_width(), 1.5 * relative_y))
+        self.screen.blit(self.third_score, (relative_x * 5 -
+                         self.third_score.get_width(), 2 * relative_y))
+        self.screen.blit(self.fourth_score, (relative_x * 5 -
+                         self.fourth_score.get_width(), 2.5 * relative_y))
+        self.screen.blit(self.fifth_score, (relative_x * 5 -
+                         self.fifth_score.get_width(), 3 * relative_y))
         pygame.display.update()
 
     def get_events(self):  # pylint: disable=inconsistent-return-statements
