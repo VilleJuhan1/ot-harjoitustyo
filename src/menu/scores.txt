@@ -1,5 +1,5 @@
 Mauno:500
 Rauno:400
-VilleJ:310
 Pauli:300
-Testeriii:250
+Rauni:200
+Paavo:100
