@@ -25,4 +25,5 @@
 |       | 1h   | Koodasin .csv-lukijan niin, että kartan voi halutessaan ladata Google Drivesta. Käyttöliittymä vaiheessa.
 | 30.4. | 3h   | Koodasin Devcommands()-luokan, jonka avulla pystyy kokeilemaan pelissä uusia asioita rikkomatta perustoiminnallisuuksia.
 |       | 1h   | Kirjoitin Docstringit lopuille luokille, päivitin dokumentaation ja tein uuden julkaisun.
-| 3.5.  | 5h   | Kirjoittelin testejä ja laajensin sovellusta niin, että ennätystuloslistalle pääsevä pelaaja pääsee kirjoittamaan ruudulle oman nimensä.
+| 3.5.  | 4h   | Kirjoittelin testejä ja laajensin sovellusta niin, että ennätystuloslistalle pääsevä pelaaja pääsee kirjoittamaan ruudulle oman nimensä.
+|       | 2h   | Täydensin työaikakirjanpitoa, dokumentaatiota ym.

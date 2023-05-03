@@ -20,6 +20,13 @@ Peli käynnistyy päävalikkoon. Valitse haluamasi toiminto nuolinäppäimillä 
 
 ![image of the main menu](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/kuvatiedostot/menu.png)
 
+### Pelaaminen
+
+Uusi peli alkaa välittömästi valittaessa päävalikosta "New Game". Liikuta matoa nuolinäppäimillä. Keräämällä omenoita saat pisteitä. Peli
+loppuu, jos törmäät omaan häntääsi (vaaleanvihreä) tai seinään (harmaa).
+
+![image of the game](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/kuvatiedostot/gameplay.png)
+
 ### Ennätystulokset
 
 Valitsemalla päävalikosta kohdan "High Score" pääset tarkastelemaan ennätystuloksia. Pääset pois tuloksista painamalla mitä tahansa näppäintä.
@@ -33,13 +40,6 @@ Voit nollata ennätystulokset oletusasetuksille komennolla:
 Mikäli saat riittävästi pisteitä päästäksesi ennätystulosten listalle, peli "jäätyy" kuoleman koittaessa ja pääset kirjoittamaan ruutuun nimesi.
 
 ![image of the input name screen](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/kuvatiedostot/input_name.png)
-
-### Pelaaminen
-
-Uusi peli alkaa välittömästi valittaessa päävalikosta "New Game". Liikuta matoa nuolinäppäimillä. Keräämällä omenoita saat pisteitä. Peli
-loppuu, jos törmäät omaan häntääsi (vaaleanvihreä) tai seinään (harmaa).
-
-![image of the game](https://github.com/VilleJuhan1/ot-harjoitustyo/blob/master/dokumentaatio/kuvatiedostot/gameplay.png)
 
 ## Kehittäjän työkalut
 

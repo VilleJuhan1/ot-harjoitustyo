@@ -10,6 +10,7 @@ classDiagram
     GameLoop <|.. EventQueue
     GameLoop <|.. Clock
     HighScore <|.. GameLoop
+    HighScoreInput <|.. GameLoop
     Level <|.. Apple
     Level <|.. Body
     Level <|.. Floor
@@ -32,8 +33,9 @@ Käyttäjän valitessa päävalikon ylimmän vaihtoehdon eli "New game", sovellu
 Lopulta se kutsuu GameLoop-luokan konstruktoria ja sen jälkeen aloittaa silmukan kutsuen funktiota GameLoop.start().
 
 GameLoop.start()-funktiossa oleva silmukka tarkkailee Level-luokan funktion Level.update() palauttamaa boolean-arvoa eli käytännössä tilannetta,
-jossa mato törmää joko seinään tai itseensä. Se tallentaa tämän tiedon muuttujaan collision. Mikäli collision == True, silmukka kutsuu Highscore-luokan
-funktiota Highscore.write_file() verratakseen pelaajan tulosta aiempiin ennätystuloksiin.
+jossa mato törmää joko seinään tai itseensä. Se tallentaa tämän tiedon muuttujaan collision. Mikäli collision == True ja pelaajan tulos on riittävän hyvä,
+silmukka kutsuu Highscore-luokan funktiota Highscore.write_file(). Kyseiselle funktiolle välitetään parametrina HighscoreInput-olion kautta saatava pelaajan
+ruudulle kirjoittama nimi.
 
 Highscore.write_file()-funktio lisää pelaajan tuloksen listaan, johon on aiemmin GameLoop-luokan konstruktorissa luettu aiemmat ennätystulokset. Tämän
 jälkeen se järjestää listan käänteisenä aloittaen isoimmasta tuloksesta ja tallentaa viisi parasta annettuun tekstitiedostoon. Funktiokutsun jälkeen

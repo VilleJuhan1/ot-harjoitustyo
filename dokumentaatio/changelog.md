@@ -10,6 +10,7 @@
 
 - .csv-tiedoston lataaminen on muutettu ehdolliseksi käyttäen Devcommands()-luokkaa.
 - Devcommands()-luokan avulla pelissä on mahdollista kokeilla uusia ominaisuuksia ilman, että perustoiminnallisuudet rikkoutuvat.
+- Kehittäjätyökaluihin pääsee käyttämällä terminaalissa Poetry-komentoa "poetry run invoke devcommands"
 
 **29.4.2023**
 
