@@ -30,6 +30,8 @@ tapahtuu millä tahansa näppäimellä.
 
 ### Julkaistut versiot
 
+[Viikko 7 (Loppupalautus)](https://github.com/VilleJuhan1/ot-harjoitustyo/releases/tag/viikko7)
+
 [Viikko 6](https://github.com/VilleJuhan1/ot-harjoitustyo/releases/tag/viikko6)
 
 [Viikko 5](https://github.com/VilleJuhan1/ot-harjoitustyo/releases/tag/viikko5)
