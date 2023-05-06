@@ -27,3 +27,4 @@
 |       | 1h   | Kirjoitin Docstringit lopuille luokille, päivitin dokumentaation ja tein uuden julkaisun.
 | 3.5.  | 4h   | Kirjoittelin testejä ja laajensin sovellusta niin, että ennätystuloslistalle pääsevä pelaaja pääsee kirjoittamaan ruudulle oman nimensä.
 |       | 2h   | Täydensin työaikakirjanpitoa, dokumentaatiota ym.
+| 6.5.  | 1h   | Tein viimeisiä viilauksia ja tarkistuksia sekä dokumentaatioon että koodiin ennen viikon 7 releasea.

@@ -11,6 +11,7 @@ classDiagram
     GameLoop <|.. Clock
     HighScore <|.. GameLoop
     HighScoreInput <|.. GameLoop
+    HighScore .. HighScoreInput
     Level <|.. Apple
     Level <|.. Body
     Level <|.. Floor

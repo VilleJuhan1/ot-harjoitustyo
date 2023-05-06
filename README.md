@@ -7,9 +7,9 @@ Pelin rakenteellisena runkona on käytetty kurssin [Sokoban-esimerkkiä](https:/
 
 ## Snek-matopeli
 
-Peli on tällä hetkellä julkaisuvaiheessa. Toki toiminnallisuuksia tullaan varmasti päivittämään lisää myös myöhemmin.
+Pelin perustoiminnallisuudet ovat valmiit!
 
-Sovellus käynnistyy päävalikkoon aloituskomennolla "poetry run invoke start". Pelin tarkoituksena on kerätä punaisia omenoita ja välttää törmäyksiä madon häntään ja seiniin. Tavoitteena on kasvaa mahdollisimman suureksi. Parhaat tulokset tallentuvat ennätystauluun, jonka voi halutessaan alustaa käyttämällä oheista poetry-komentoa.
+Sovellus käynnistyy päävalikkoon aloituskomennolla "poetry run invoke start". Pelin tarkoituksena on kerätä punaisia omenoita ja välttää törmäyksiä madon häntään ja seiniin. Tavoitteena on kasvaa mahdollisimman suureksi. Parhaat tulokset tallentuvat ennätystauluun, jonka voi halutessaan alustaa käyttämällä poetry-komentoa "poetry run invoke reset-score".
 
 Lähdekoodissa on mukana myös kehittäjätyökalut, joiden avulla pystyy vaihtamaan pelimuodon onlineksi. Tällä hetkellä ainoa vaikutus kuitenkin on,
 että pelin kartta latautuu Google Drivessa olevasta .csv-tiedostosta. Kehittäjätyökalujen avulla tiedostopolku on mahdollista muuttaa haluamakseen. Peli
